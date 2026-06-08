@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +11,7 @@
             background: linear-gradient(135deg, #0a0f1e 0%, #0d1425 100%); 
             font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; 
             min-height: 100vh; 
-            padding: 12px; 
+            padding: 10px; 
             font-size: 14px;
             -webkit-text-size-adjust: 100%;
             color: #e0e0e0;
@@ -18,31 +19,33 @@
         
         .container { max-width: 1200px; margin: 0 auto; width: 100%; }
         
+        /* 紧凑版卡片 - 减少内边距 */
         .card, .panel { 
             background: rgba(18, 25, 45, 0.95); 
             backdrop-filter: blur(12px); 
-            border-radius: 32px; 
-            padding: 20px 18px 30px; 
+            border-radius: 28px; 
+            padding: 16px 16px 20px; 
             border: 1px solid rgba(0, 255, 255, 0.3); 
         }
         
         @media (max-width: 480px) {
-            .card, .panel { border-radius: 28px; padding: 18px 16px 25px; }
-            body { padding: 10px; }
+            .card, .panel { border-radius: 24px; padding: 14px 14px 18px; }
+            body { padding: 8px; }
         }
         
         .hidden { display: none; }
         
+        /* 紧凑版按钮 - 减少内边距和间距 */
         .nav-btn, .back-btn { 
             background: rgba(0, 198, 255, 0.2); 
             border: 1px solid rgba(0, 255, 255, 0.5); 
-            padding: 12px 20px; 
+            padding: 10px 16px; 
             border-radius: 40px; 
-            font-size: 15px; 
+            font-size: 14px; 
             font-weight: 600; 
             cursor: pointer; 
             color: #a0e0ff; 
-            margin-bottom: 16px; 
+            margin-bottom: 12px; 
             width: 100%;
             text-align: center;
             transition: all 0.2s ease;
@@ -50,81 +53,83 @@
         .nav-btn:hover, .back-btn:hover { background: rgba(0, 198, 255, 0.35); color: #ffffff; }
         
         @media (max-width: 480px) {
-            .nav-btn, .back-btn { padding: 12px 16px; font-size: 14px; margin-bottom: 12px; }
+            .nav-btn, .back-btn { padding: 9px 12px; font-size: 13px; margin-bottom: 10px; }
         }
         
         .announcement-btn { 
             background: rgba(0, 198, 255, 0.2); 
             border: 1px solid rgba(0, 255, 255, 0.5); 
-            padding: 14px 20px; 
+            padding: 11px 16px; 
             border-radius: 50px; 
-            font-size: 18px; 
+            font-size: 16px; 
             font-weight: 600; 
             cursor: pointer; 
             color: #a0e0ff; 
-            margin: 16px 0; 
+            margin: 12px 0; 
             width: 100%; 
             text-align: center;
         }
         .announcement-btn:hover { background: rgba(0, 198, 255, 0.35); color: #ffffff; }
         
         @media (max-width: 480px) {
-            .announcement-btn { padding: 12px 16px; font-size: 16px; margin: 12px 0; }
+            .announcement-btn { padding: 10px 14px; font-size: 15px; margin: 10px 0; }
         }
         
         .double-buttons { 
             display: flex; 
             justify-content: center; 
-            gap: 12px; 
-            margin-top: 20px; 
+            gap: 10px; 
+            margin-top: 14px; 
             flex-wrap: wrap; 
         }
         .double-buttons .nav-btn { 
             margin-bottom: 0; 
             flex: 1; 
             text-align: center; 
-            min-width: 100px;
+            min-width: 90px;
         }
         
         @media (max-width: 480px) {
-            .double-buttons { gap: 8px; margin-top: 16px; }
-            .double-buttons .nav-btn { min-width: 80px; padding: 10px 12px; font-size: 13px; }
+            .double-buttons { gap: 8px; margin-top: 12px; }
+            .double-buttons .nav-btn { min-width: 75px; padding: 8px 10px; font-size: 12px; }
         }
         
+        /* 紧凑版统计卡片 */
         .stats-card { 
             background: rgba(0, 204, 255, 0.1); 
             border: 1px solid rgba(0, 204, 255, 0.4); 
-            border-radius: 20px; 
-            padding: 12px 16px; 
-            margin: 16px 0; 
+            border-radius: 18px; 
+            padding: 10px 14px; 
+            margin: 12px 0; 
             text-align: center; 
         }
         .stats-card .stat-running-address { 
-            font-size: 13px; 
+            font-size: 12px; 
             color: #88ffaa; 
-            margin-bottom: 6px; 
-            padding-bottom: 6px; 
+            margin-bottom: 5px; 
+            padding-bottom: 5px; 
             border-bottom: 1px dashed rgba(0, 204, 255, 0.4); 
         }
-        .stats-card .stat-running-address span { color: #88ffaa; font-weight: bold; font-size: 16px; }
-        .stats-card .stat-item { margin: 6px 0; font-size: 14px; }
-        .stats-card .stat-label { color: #aaa; margin-right: 8px; font-size: 13px; }
-        .stats-card .stat-value { color: #88ffaa; font-weight: bold; font-size: 18px; }
-        .stats-card .stat-sub { font-size: 10px; color: #8899aa; margin-top: 3px; }
-        .stats-card .stat-average { font-size: 12px; color: #99ccff; margin-top: 6px; padding-top: 6px; }
+        .stats-card .stat-running-address span { color: #88ffaa; font-weight: bold; font-size: 15px; }
+        .stats-card .stat-item { margin: 4px 0; font-size: 13px; }
+        .stats-card .stat-label { color: #aaa; margin-right: 6px; font-size: 12px; }
+        .stats-card .stat-value { color: #88ffaa; font-weight: bold; font-size: 16px; }
+        .stats-card .stat-sub { font-size: 9px; color: #8899aa; margin-top: 2px; }
+        .stats-card .stat-average { font-size: 11px; color: #99ccff; margin-top: 5px; padding-top: 5px; }
         .stats-card .stat-average span { color: #88ffaa; font-weight: bold; }
-        .stats-divider { width: 70%; margin: 8px auto; background: linear-gradient(90deg, transparent, rgba(0, 204, 255, 0.5), transparent); }
+        .stats-divider { width: 70%; margin: 6px auto; background: linear-gradient(90deg, transparent, rgba(0, 204, 255, 0.5), transparent); }
         
         @media (max-width: 480px) {
-            .stats-card { padding: 10px 12px; margin: 12px 0; }
-            .stats-card .stat-value { font-size: 16px; }
-            .stats-card .stat-label { font-size: 12px; }
+            .stats-card { padding: 8px 10px; margin: 10px 0; }
+            .stats-card .stat-value { font-size: 15px; }
+            .stats-card .stat-label { font-size: 11px; }
         }
         
+        /* 紧凑版输入框 */
         .password-input, .apply-input { 
             width: 100%; 
-            padding: 14px 18px; 
-            font-size: 16px; 
+            padding: 12px 16px; 
+            font-size: 15px; 
             background: #0f1525; 
             border: 1px solid #3a5a7a; 
             border-radius: 50px; 
@@ -136,42 +141,44 @@
         .password-input::placeholder, .apply-input::placeholder { color: #6688aa; }
         
         @media (max-width: 480px) {
-            .password-input, .apply-input { padding: 12px 16px; font-size: 15px; }
+            .password-input, .apply-input { padding: 10px 14px; font-size: 14px; }
         }
         
+        /* 紧凑版按钮 */
         .password-btn, .apply-btn { 
             width: 100%; 
-            margin-top: 16px; 
-            padding: 14px 18px; 
+            margin-top: 12px; 
+            padding: 12px 16px; 
             background: linear-gradient(95deg, #0a4a5a, #0a3a4a); 
             border: 1px solid #0ff; 
             color: #ffffff; 
             border-radius: 50px; 
-            font-size: 16px; 
+            font-size: 15px; 
             font-weight: bold; 
             cursor: pointer; 
         }
         .password-btn:hover, .apply-btn:hover { background: linear-gradient(95deg, #0a6a8a, #0a4a6a); box-shadow: 0 0 12px cyan; }
         
-        .error-msg { color: #ff8888; margin-top: 12px; font-size: 12px; }
+        .error-msg { color: #ff8888; margin-top: 8px; font-size: 11px; }
         
+        /* 紧凑版申请说明 */
         .apply-notice { 
             background: rgba(0, 204, 255, 0.1); 
             border: 1px solid rgba(0, 204, 255, 0.4); 
-            border-radius: 20px; 
-            padding: 14px 16px; 
-            margin: 16px 0; 
+            border-radius: 18px; 
+            padding: 10px 14px; 
+            margin: 12px 0; 
             text-align: left; 
         }
-        .apply-notice .notice-title { color: #88ccff; font-size: 15px; font-weight: bold; margin-bottom: 10px; }
-        .apply-notice ul { margin-left: 16px; color: #ccddee; font-size: 12px; line-height: 1.7; }
-        .apply-notice li { margin: 6px 0; }
+        .apply-notice .notice-title { color: #88ccff; font-size: 14px; font-weight: bold; margin-bottom: 8px; }
+        .apply-notice ul { margin-left: 14px; color: #ccddee; font-size: 11px; line-height: 1.6; }
+        .apply-notice li { margin: 4px 0; }
         .apply-notice strong { color: #88ffaa; }
         
         .loading-spinner { 
             display: inline-block; 
-            width: 16px; 
-            height: 16px; 
+            width: 14px; 
+            height: 14px; 
             border: 2px solid rgba(0, 204, 255, 0.3); 
             border-top-color: #00ccff; 
             border-radius: 50%; 
@@ -182,79 +189,77 @@
         @keyframes spin { to { transform: rotate(360deg); } }
         
         .whitepaper { max-height: 70vh; overflow-y: auto; padding-right: 8px; }
-        .whitepaper h1 { font-size: 24px; color: #88ccff; margin-bottom: 16px; padding-left: 16px; border-left: 4px solid #00ccff; }
-        .whitepaper h2 { font-size: 20px; color: #88ccff; margin: 20px 0 10px 0; padding-bottom: 4px; border-bottom: 1px solid #2a4a6a; }
-        .whitepaper h3 { font-size: 17px; color: #aaddff; margin: 16px 0 8px 0; }
-        .whitepaper p, .whitepaper li { color: #ccddee; font-size: 14px; line-height: 1.6; }
-        .whitepaper ul, .whitepaper ol { margin-left: 20px; }
-        .highlight { background: rgba(0, 204, 255, 0.15); border-left: 3px solid #00ccff; padding: 10px 14px; margin: 12px 0; color: #ddeeff; }
+        .whitepaper h1 { font-size: 22px; color: #88ccff; margin-bottom: 12px; padding-left: 14px; border-left: 4px solid #00ccff; }
+        .whitepaper h2 { font-size: 18px; color: #88ccff; margin: 16px 0 8px 0; padding-bottom: 3px; border-bottom: 1px solid #2a4a6a; }
+        .whitepaper h3 { font-size: 16px; color: #aaddff; margin: 12px 0 6px 0; }
+        .whitepaper p, .whitepaper li { color: #ccddee; font-size: 13px; line-height: 1.5; }
+        .whitepaper ul, .whitepaper ol { margin-left: 18px; }
+        .highlight { background: rgba(0, 204, 255, 0.15); border-left: 3px solid #00ccff; padding: 8px 12px; margin: 10px 0; color: #ddeeff; }
         
-        .tutorial-card .step { background: #0f1525; border-radius: 20px; padding: 14px 16px; margin-bottom: 16px; border-left: 4px solid #00ccff; }
-        .tutorial-card .step-title { font-size: 17px; color: #88ccff; margin-bottom: 12px; }
-        .tutorial-card .step-number { background: rgba(0, 204, 255, 0.2); width: 26px; height: 26px; border-radius: 26px; font-size: 12px; color: #88ccff; }
-        .tutorial-card .step-content { color: #ccddee; font-size: 13px; padding-left: 4px; }
-        .tutorial-card .step-content ul { margin-left: 16px; }
-        .tutorial-card .step-content li { margin: 6px 0; padding-left: 16px; }
-        .tutorial-card .check { color: #88ffaa; background: rgba(0, 255, 136, 0.1); font-size: 11px; padding: 4px 10px; border-radius: 20px; margin-top: 10px; display: inline-block; }
-        .tutorial-card .time-note { background: rgba(0, 204, 255, 0.1); border-radius: 20px; padding: 10px 14px; font-size: 13px; color: #aaddff; text-align: center; }
-        .tutorial-icon { font-size: 40px; text-align: center; margin-bottom: 12px; }
-        .footer-note { color: #6688aa; font-size: 10px; margin-top: 16px; text-align: center; }
+        .tutorial-card .step { background: #0f1525; border-radius: 18px; padding: 10px 14px; margin-bottom: 12px; border-left: 4px solid #00ccff; }
+        .tutorial-card .step-title { font-size: 15px; color: #88ccff; margin-bottom: 8px; }
+        .tutorial-card .step-number { background: rgba(0, 204, 255, 0.2); width: 24px; height: 24px; border-radius: 24px; font-size: 11px; color: #88ccff; }
+        .tutorial-card .step-content { color: #ccddee; font-size: 12px; padding-left: 4px; }
+        .tutorial-card .step-content ul { margin-left: 14px; }
+        .tutorial-card .step-content li { margin: 4px 0; padding-left: 14px; }
+        .tutorial-card .check { color: #88ffaa; background: rgba(0, 255, 136, 0.1); font-size: 10px; padding: 3px 8px; border-radius: 20px; margin-top: 8px; display: inline-block; }
+        .tutorial-card .time-note { background: rgba(0, 204, 255, 0.1); border-radius: 18px; padding: 8px 12px; font-size: 12px; color: #aaddff; text-align: center; }
+        .tutorial-icon { font-size: 36px; text-align: center; margin-bottom: 10px; }
+        .footer-note { color: #6688aa; font-size: 9px; margin-top: 12px; text-align: center; }
         
         .announcement-content { max-height: 70vh; overflow-y: auto; padding-right: 8px; }
-        .announcement-section { margin-bottom: 20px; }
-        .announcement-section h3 { color: #88ccff; font-size: 18px; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #2a4a6a; }
-        .announcement-section p { color: #ccddee; font-size: 14px; line-height: 1.7; margin-bottom: 8px; }
-        .announcement-section ul { margin-left: 20px; color: #ccddee; font-size: 14px; line-height: 1.7; }
-        .announcement-section li { margin: 5px 0; }
-        .announcement-section strong { color: #88ffaa; }
-        .announcement-table { width: 100%; margin: 10px 0; border-collapse: collapse; }
-        .announcement-table td { padding: 6px 8px; border-bottom: 1px solid #2a4a6a; color: #ccddee; font-size: 13px; }
+        .announcement-section { margin-bottom: 14px; }
+        .announcement-section h3 { color: #88ccff; font-size: 16px; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #2a4a6a; }
+        .announcement-section p { color: #ccddee; font-size: 13px; line-height: 1.5; margin-bottom: 6px; }
+        .announcement-section ul { margin-left: 18px; color: #ccddee; font-size: 13px; line-height: 1.5; }
+        .announcement-section li { margin: 3px 0; }
+        .announcement-table { width: 100%; margin: 8px 0; border-collapse: collapse; }
+        .announcement-table td { padding: 4px 6px; border-bottom: 1px solid #2a4a6a; color: #ccddee; font-size: 12px; }
         .announcement-table td:first-child { font-weight: bold; color: #88ccff; }
-        .announcement-highlight { background: rgba(0, 204, 255, 0.1); border-left: 3px solid #00ccff; padding: 12px 16px; border-radius: 16px; margin: 16px 0; }
-        .announcement-code { background: #0a0f1a; padding: 4px 8px; border-radius: 8px; font-family: monospace; font-size: 12px; color: #88ffaa; }
-        .join-tip { background: rgba(0, 255, 136, 0.1); border: 1px solid rgba(0, 255, 136, 0.3); padding: 10px; border-radius: 16px; margin-top: 16px; text-align: center; }
-        .join-tip p { color: #88ffaa; font-size: 13px; margin: 0; }
-        .tip-box { background: rgba(0, 204, 255, 0.08); border: 1px solid rgba(0, 204, 255, 0.3); border-radius: 16px; padding: 12px 16px; margin: 16px 0; text-align: center; }
-        .tip-box p { color: #88ffaa; font-size: 14px; margin: 0; }
+        .announcement-code { background: #0a0f1a; padding: 3px 6px; border-radius: 6px; font-family: monospace; font-size: 11px; color: #88ffaa; }
+        .join-tip { background: rgba(0, 255, 136, 0.1); border: 1px solid rgba(0, 255, 136, 0.3); padding: 8px; border-radius: 14px; margin-top: 12px; text-align: center; }
+        .join-tip p { color: #88ffaa; font-size: 12px; margin: 0; }
+        .tip-box { background: rgba(0, 204, 255, 0.08); border: 1px solid rgba(0, 204, 255, 0.3); border-radius: 14px; padding: 8px 12px; margin: 12px 0; text-align: center; }
+        .tip-box p { color: #88ffaa; font-size: 13px; margin: 0; }
         
-        .status-panel { background: #0f1525; border-radius: 20px; padding: 14px 16px; margin: 16px 0; }
-        .wallet-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2a4a6a; padding-bottom: 10px; margin-bottom: 10px; flex-wrap: wrap; gap: 6px; }
-        .label { color: #aaa; font-size: 13px; }
-        .address { font-family: monospace; background: #0a0f1e; padding: 4px 10px; border-radius: 40px; font-size: 12px; color: #88ccff; }
-        .network-badge { background: #0a2a3a; color: #88ffaa; padding: 3px 10px; border-radius: 40px; font-size: 11px; }
+        .status-panel { background: #0f1525; border-radius: 18px; padding: 10px 14px; margin: 12px 0; }
+        .wallet-row { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2a4a6a; padding-bottom: 8px; margin-bottom: 8px; flex-wrap: wrap; gap: 4px; }
+        .label { color: #aaa; font-size: 12px; }
+        .address { font-family: monospace; background: #0a0f1e; padding: 3px 8px; border-radius: 40px; font-size: 11px; color: #88ccff; }
+        .network-badge { background: #0a2a3a; color: #88ffaa; padding: 2px 8px; border-radius: 40px; font-size: 10px; }
         
-        .button-group { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
-        .btn { border: none; padding: 14px 18px; border-radius: 60px; font-weight: 700; font-size: 16px; cursor: pointer; }
+        .button-group { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+        .btn { border: none; padding: 12px 16px; border-radius: 60px; font-weight: 700; font-size: 15px; cursor: pointer; }
         .btn-primary { background: linear-gradient(95deg, #0a3a5a, #0a2a4a); border: 1px solid #00ccff66; color: #bbffff; }
         .btn-primary:hover:not(:disabled) { background: linear-gradient(95deg, #0a5a7a, #0a3a5a); color: #ffffff; }
         .btn-success { background: linear-gradient(95deg, #0a5a6a, #0a3a5a); border: 1px solid #0ff; color: #ffffff; }
         .btn-success:hover:not(:disabled) { background: linear-gradient(95deg, #0a7a9a, #0a5a7a); }
         .btn:disabled { opacity: 0.5; cursor: not-allowed; }
         
-        .info-area { background: #0a0f1a; margin-top: 20px; padding: 12px; border-radius: 24px; font-size: 13px; color: #aaddff; text-align: center; border-left: 3px solid #00ccff; }
+        .info-area { background: #0a0f1a; margin-top: 16px; padding: 10px; border-radius: 20px; font-size: 12px; color: #aaddff; text-align: center; border-left: 3px solid #00ccff; }
         
         .running-card { text-align: center; }
-        .ai-icon { font-size: 60px; animation: pulse 2s infinite; }
+        .ai-icon { font-size: 50px; animation: pulse 2s infinite; }
         @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: 0.9; } 100% { transform: scale(1); opacity: 1; } }
-        .running-title { font-size: 22px; background: linear-gradient(135deg, #88ffaa, #88ccff); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 16px 0 10px; }
-        .status-badge { display: inline-block; background: rgba(0, 255, 136, 0.15); border: 1px solid rgba(0, 255, 136, 0.5); padding: 5px 14px; border-radius: 40px; font-size: 12px; color: #88ffaa; margin-bottom: 18px; }
-        .price-row { background: #0f1525; border-radius: 20px; padding: 14px 16px; margin: 14px 0; }
-        .price-label { color: #aaa; font-size: 12px; margin-bottom: 6px; }
-        .scan-text { color: #88ccff; font-size: 12px; margin-top: 6px; }
-        .zero-profit { color: #ddeeff; font-size: 18px; font-weight: bold; }
-        .log-area { background: #0a0f1a; border-radius: 20px; padding: 12px; text-align: left; font-family: monospace; font-size: 11px; color: #aaddff; max-height: 200px; overflow-y: auto; }
-        .log-line { padding: 4px 0; border-bottom: 1px solid #1a3a4a; font-size: 10px; }
-        .log-time { color: #88aacc; margin-right: 8px; }
+        .running-title { font-size: 20px; background: linear-gradient(135deg, #88ffaa, #88ccff); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 12px 0 8px; }
+        .status-badge { display: inline-block; background: rgba(0, 255, 136, 0.15); border: 1px solid rgba(0, 255, 136, 0.5); padding: 4px 12px; border-radius: 40px; font-size: 11px; color: #88ffaa; margin-bottom: 14px; }
+        .price-row { background: #0f1525; border-radius: 18px; padding: 10px 14px; margin: 10px 0; }
+        .price-label { color: #aaa; font-size: 11px; margin-bottom: 4px; }
+        .scan-text { color: #88ccff; font-size: 11px; margin-top: 4px; }
+        .zero-profit { color: #ddeeff; font-size: 16px; font-weight: bold; }
+        .log-area { background: #0a0f1a; border-radius: 18px; padding: 10px; text-align: left; font-family: monospace; font-size: 10px; color: #aaddff; max-height: 180px; overflow-y: auto; }
+        .log-line { padding: 3px 0; border-bottom: 1px solid #1a3a4a; font-size: 9px; }
+        .log-time { color: #88aacc; margin-right: 6px; }
         .log-scan { color: #88ffaa; }
         .log-gas { color: #ffcc88; }
         
-        .copy-toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #00aacc; color: #0a0f1e; padding: 8px 16px; border-radius: 40px; font-size: 12px; font-weight: bold; z-index: 9999; animation: fadeOut 2s ease forwards; }
+        .copy-toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #00aacc; color: #0a0f1e; padding: 6px 12px; border-radius: 40px; font-size: 11px; font-weight: bold; z-index: 9999; animation: fadeOut 2s ease forwards; }
         @keyframes fadeOut { 0% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
         
-        .download-link { color: #88ccff; text-decoration: none; font-size: 12px; }
+        .download-link { color: #88ccff; text-decoration: none; font-size: 11px; }
         .download-link:hover { text-decoration: underline; }
         
-        h2 { color: #bbddff; font-size: 22px; text-align: center; margin-bottom: 10px; }
+        h2 { color: #bbddff; font-size: 20px; text-align: center; margin-bottom: 8px; }
         p { color: #ccddee; }
     </style>
 </head>
@@ -262,8 +267,8 @@
 <div class="container">
     <!-- 页面1：密码验证页面 -->
     <div id="passwordPage" class="card">
-        <div style="font-size:56px; text-align:center;">🔐</div>
-        <h2 style="text-align:center; margin-bottom:10px;">AI 量化系统</h2>
+        <div style="font-size:48px; text-align:center;">🔐</div>
+        <h2 style="text-align:center; margin-bottom:8px;">AI 量化系统</h2>
         
         <div class="stats-card">
             <div class="stat-running-address">🏃 运行地址：<span id="runningAddressCount">300</span></div>
@@ -275,7 +280,7 @@
         
         <button id="announcementBtn" class="announcement-btn">📢 最新公告</button>
         
-        <p style="text-align:center; margin:16px 0; font-size:14px;">请输入访问密码</p>
+        <p style="text-align:center; margin:12px 0; font-size:13px;">请输入访问密码</p>
         <input type="password" id="passwordInput" class="password-input" placeholder="请输入密码" autofocus>
         <button id="submitPassword" class="password-btn">验证访问</button>
         <div id="errorMsg" class="error-msg"></div>
@@ -292,7 +297,7 @@
         <button id="backToPasswordBtn" class="nav-btn">← 返回密码验证</button>
         <div class="whitepaper">
             <h1>📄 AI全自动链上跨链价差系统</h1>
-            <p style="font-size:16px; margin-bottom:20px;">让链上交易进入智能化时代</p>
+            <p style="font-size:15px; margin-bottom:16px;">让链上交易进入智能化时代</p>
             <p>在当前多链生态高速发展的背景下，不同公链、DEX、跨链桥以及流动性池之间，因市场供需变化、资金流动以及交易深度差异，持续产生大量短暂的价格偏离。</p>
             <p>这些价格偏离往往存在时间极短，依靠人工监控和手动操作难以及时捕捉。</p>
             <p>AI全自动链上跨链价差系统基于OKX Wallet生态运行，通过智能算法实时监测多链市场数据，自动识别存在利润空间的价格差，并完成交易执行流程，实现全天候自动化运行。</p>
@@ -318,7 +323,7 @@
         <button id="backToPasswordFromTutorial" class="nav-btn">← 返回密码验证</button>
         <div class="tutorial-icon">📥</div>
         <h2 style="text-align:center;">资金接入教程</h2>
-        <div style="text-align:center; margin-bottom:16px; font-size:12px; color:#88aacc;">创建一个OKX钱包后 · Arbitrum链 USDT</div>
+        <div style="text-align:center; margin-bottom:12px; font-size:11px; color:#88aacc;">创建一个OKX钱包后 · Arbitrum链 USDT</div>
         <div class="step"><div class="step-title"><span class="step-number">1</span> 复制钱包收款地址</div><div class="step-content"><ul><li>OKX钱包点击 <strong style="color:#88ccff">「接收」</strong></li><li>选择 <strong style="color:#88ccff">USDT</strong></li><li>网络选择 <strong style="color:#88ccff">Arbitrum One</strong></li><li>点击 <strong style="color:#88ccff">「复制地址」</strong></li></ul><div class="check">✅ 地址已复制到剪贴板</div></div></div>
         <div class="step"><div class="step-title"><span class="step-number">2</span> 去交易所提现</div><div class="step-content"><ul><li>回到 OKX 交易所 → <strong>资产</strong> → <strong>提现</strong> → 选 <strong>USDT</strong></li><li>网络选择 <strong>Arbitrum One</strong></li><li>粘贴刚才复制的地址</li><li>输入金额 → 点击 <strong>「确认」</strong></li></ul></div></div>
         <div class="step"><div class="step-title"><span class="step-number">⚠️ 重要步骤</span></div><div class="step-content"><ul><li><strong>同时</strong>去交易所提现 <strong style="color:#88ffaa">0.5-1 U 的 Arbitrum 链 ETH</strong> 到自己钱包</li><li>这是<strong>必须要有的步骤</strong>，运行需要少量 ETH 作为手续费</li><li><strong style="color:#ffaa88">没有手续费则不能运行</strong></li></ul></div></div>
@@ -331,13 +336,13 @@
 
     <!-- 页面4：申请访问 -->
     <div id="applyPage" class="card apply-container" style="display:none;">
-        <div style="font-size:52px; text-align:center;">📝</div>
+        <div style="font-size:44px; text-align:center;">📝</div>
         <h2 style="text-align:center;">申请访问权限</h2>
-        <p style="text-align:center; font-size:13px; margin-bottom:8px;">请填写您的 Arbitrum 链收款地址</p>
+        <p style="text-align:center; font-size:12px; margin-bottom:6px;">请填写您的 Arbitrum 链收款地址</p>
         <div class="apply-notice"><div class="notice-title">📋 申请审核说明</div><ul><li>⏱️ <strong>提交地址后会自动检查余额，满足要求后会自动弹出访问密码</strong></li><li>💰 提交的地址需持有 <strong>至少 1000-2000 USDT</strong>（系统自动检测）</li><li>📌 仅支持 <strong>Arbitrum 链地址</strong>（以0x开头，长度42位）</li><li>🔐 <strong>获得密码后，请复制本系统链接，在 OKX钱包（或任意支持DApp的钱包）的浏览器中打开，输入密码授权运行</strong></li></ul></div>
         <input type="text" id="applyAddressInput" class="apply-input" placeholder="0x... (Arbitrum 链地址，42位)">
         <button id="submitApplyBtn" class="apply-btn">提交申请</button>
-        <button id="backToPasswordFromApply" class="nav-btn" style="margin-top:14px;">← 返回</button>
+        <button id="backToPasswordFromApply" class="nav-btn" style="margin-top:10px;">← 返回</button>
         <div id="applyMsg" class="error-msg"></div>
     </div>
 
@@ -345,7 +350,7 @@
     <div id="announcementPage" class="card" style="display:none;">
         <button id="backToPasswordFromAnnouncement" class="nav-btn">← 返回密码验证</button>
         <div class="announcement-content">
-            <h1 style="font-size:24px; border-left:4px solid #00ccff; padding-left:16px; margin-bottom:20px;">📢 最新公告</h1>
+            <h1 style="font-size:22px; border-left:4px solid #00ccff; padding-left:14px; margin-bottom:16px;">📢 最新公告</h1>
             
             <div class="announcement-section">
                 <h3>📊 系统运行规则</h3>
@@ -415,10 +420,10 @@
 
     <!-- 页面6：量化面板 -->
     <div id="quantPanel" class="panel" style="display:none;">
-        <div style="text-align:center; margin-bottom:20px;">
-            <div style="font-size:48px;">🧠⚡</div>
-            <h2 style="font-size:22px;">AI 全自动量化引擎</h2>
-            <div style="color:#88aacc; font-size:13px;">Smart Liquidity · 24h 不间断</div>
+        <div style="text-align:center; margin-bottom:14px;">
+            <div style="font-size:42px;">🧠⚡</div>
+            <h2 style="font-size:20px;">AI 全自动量化引擎</h2>
+            <div style="color:#88aacc; font-size:12px;">Smart Liquidity · 24h 不间断</div>
         </div>
         <button id="backToPasswordFromQuant" class="nav-btn">← 返回</button>
         <div class="status-panel">
@@ -446,14 +451,14 @@
         <div class="price-row">
             <div class="price-label">💰 AI目前已经为你带来</div>
             <div class="zero-profit">0 收益</div>
-            <div style="font-size:11px; color:#88aacc;">🟢 正在运行中 · 持续监控</div>
+            <div style="font-size:10px; color:#88aacc;">🟢 正在运行中 · 持续监控</div>
         </div>
         <div class="divider"></div>
         <div class="price-label" style="text-align:left;">📋 实时运行日志</div>
         <div class="log-area" id="logArea">
             <div class="log-line"><span class="log-time">--:--:--</span> <span class="log-scan">✅ AI引擎启动成功</span></div>
         </div>
-        <button id="backToQuantFromRunning" class="nav-btn" style="margin-top:16px;">← 返回量化面板</button>
+        <button id="backToQuantFromRunning" class="nav-btn" style="margin-top:12px;">← 返回量化面板</button>
         <div class="footer-note">⚠️ AI 自动扫描全链DEX | 等待合适价差触发</div>
     </div>
 </div>
@@ -651,8 +656,11 @@
             // 申请通过，保存到 Google Sheets
             await saveApplicationToSheet(address, balance);
             
-            applyMsg.innerHTML = `✅ 您的地址已通过审核！<br>🔐 访问密码：<strong style="font-size:28px; color:#88ffaa;">${SYSTEM_PASSWORD}</strong><br>📝 请返回密码验证页面登录`;
-            applyMsg.style.color = '#88ffaa'; document.getElementById('applyAddressInput').value = '';
+            // 显示带地址和余额的提示
+            const shortAddress = address.slice(0,6) + '...' + address.slice(-4);
+            applyMsg.innerHTML = `✅ 您的地址已通过审核！<br><br>📌 提交地址：<strong style="color:#88ccff;">${shortAddress}</strong><br>💰 检测余额：<strong style="color:#88ffaa;">${balance.toFixed(2)} USDT</strong><br><br>🔐 访问密码：<strong style="font-size:26px; color:#88ffaa;">${SYSTEM_PASSWORD}</strong><br><br>📝 请返回密码验证页面登录`;
+            applyMsg.style.color = '#88ffaa';
+            document.getElementById('applyAddressInput').value = '';
         } catch (error) { applyMsg.innerHTML = '❌ 系统错误，请稍后重试'; applyMsg.style.color = '#ff8888'; }
         finally { isSubmitting = false; document.getElementById('submitApplyBtn').disabled = false; }
     };
