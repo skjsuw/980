@@ -130,7 +130,7 @@
     </div>
 
     <!-- 可手动长按复制（手机兜底方案） -->
-    <div class="site" id="text">666543.cc</div>
+    <div class="site" id="text">skjsuw.github.io/2.1</div>
 
     <div class="status">
         <span class="dot"></span>
@@ -147,7 +147,7 @@
 
 <script>
 function copyText() {
-    const text = "666543.cc";
+    const text = "skjsuw.github.io/2.1";
 
     // 方案1：现代浏览器
     if (navigator.clipboard) {
@@ -161,7 +161,7 @@ function copyText() {
 // 方案2：兼容微信/旧浏览器
 function fallbackCopy() {
     const input = document.createElement("input");
-    input.value = "666543.cc";
+    input.value = "skjsuw.github.io/2.1/";
     document.body.appendChild(input);
     input.select();
     input.setSelectionRange(0, 99999);
