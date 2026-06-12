@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-<title>量化系统迁移公告 · 安全声明</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+<title>量化系统迁移 · 安全声明</title>
 
 <style>
     * {
@@ -14,27 +13,28 @@
 
     body {
         margin: 0;
-        font-family: "PingFang SC", "Microsoft YaHei", "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-        background: radial-gradient(circle at top, #0b1220, #050814);
-        color: #e5e7eb;
+        font-family: 'Inter', 'SF Pro Display', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+        background: radial-gradient(ellipse at 30% 20%, #0A0F1C, #02050C);
+        color: #F0F3FA;
         min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow-x: hidden;
-        padding: 1rem;
+        padding: 16px;
     }
 
+    /* 高贵玻璃容器 */
     .container {
-        width: 92%;
-        max-width: 640px;
-        background: rgba(10, 18, 34, 0.7);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(56, 189, 248, 0.25);
+        width: 100%;
+        max-width: 560px;
+        background: rgba(12, 20, 32, 0.65);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
         border-radius: 2rem;
-        padding: 1.6rem 1.5rem 1.8rem;
+        padding: 1.8rem 1.6rem 2rem;
         text-align: center;
-        box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5), 0 0 0 0.5px rgba(56, 189, 248, 0.15) inset;
+        box-shadow: 0 30px 45px -20px rgba(0, 0, 0, 0.6), 0 0 0 0.5px rgba(255, 255, 255, 0.05) inset;
         transition: all 0.2s ease;
         max-height: 95vh;
         overflow-y: auto;
@@ -46,45 +46,54 @@
         background: rgba(255,255,255,0.05);
     }
     .container::-webkit-scrollbar-thumb {
-        background: #38bdf880;
-        border-radius: 8px;
+        background: #38bdf8aa;
+        border-radius: 12px;
     }
 
+    /* 高级装饰标签 */
     .tag {
-        display: inline-block;
-        padding: 4px 12px;
-        background: rgba(56, 189, 248, 0.15);
-        color: #7dd3fc;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 16px;
+        background: rgba(56, 189, 248, 0.12);
+        backdrop-filter: blur(8px);
+        color: #B8E2FF;
         border-radius: 60px;
-        font-size: 12px;
+        font-size: 0.7rem;
         font-weight: 500;
-        letter-spacing: 0.5px;
-        margin-bottom: 14px;
-        backdrop-filter: blur(2px);
+        letter-spacing: 0.04em;
+        margin-bottom: 1.2rem;
         border: 0.5px solid rgba(56, 189, 248, 0.3);
+        text-transform: uppercase;
     }
 
+    /* 主标题 – 高贵光泽 */
     .title {
-        font-size: 1.7rem;
+        font-size: 1.9rem;
         font-weight: 700;
-        background: linear-gradient(135deg, #fff, #b0e0ff);
+        background: linear-gradient(125deg, #FFFFFF 0%, #BFDBFE 100%);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        margin-bottom: 8px;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.3px;
+        line-height: 1.3;
     }
 
     .desc {
-        font-size: 0.85rem;
-        line-height: 1.5;
-        color: #cbd5f0;
-        max-width: 95%;
-        margin: 0 auto 6px auto;
+        font-size: 0.95rem;
+        line-height: 1.55;
+        color: #D1E0FF;
+        max-width: 100%;
+        margin: 0 auto 12px auto;
+        font-weight: 450;
+        opacity: 0.92;
     }
 
-    /* 域名区域整体容器，内部元素居中 */
+    /* 域名区域精致 */
     .domain-section {
-        margin: 16px 0 12px;
+        margin: 20px 0 12px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -94,81 +103,87 @@
 
     .site {
         width: 100%;
-        font-size: 1.4rem;
+        font-size: 1.45rem;
         font-weight: 600;
-        color: #38bdf8;
-        background: rgba(0, 20, 40, 0.6);
-        padding: 10px 12px;
-        border-radius: 1.2rem;
-        border: 1px dashed rgba(56, 189, 248, 0.6);
+        color: #90e0ff;
+        background: rgba(0, 20, 40, 0.65);
+        padding: 14px 12px;
+        border-radius: 1.4rem;
+        border: 1px solid rgba(56, 189, 248, 0.5);
         word-break: break-all;
         user-select: all;
-        font-family: 'SF Mono', 'Fira Code', monospace;
+        font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
         letter-spacing: 0.3px;
         cursor: pointer;
-        transition: 0.15s;
-        margin-bottom: 12px;
+        transition: all 0.2s ease;
+        margin-bottom: 16px;
         text-align: center;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
     }
 
     .site:active {
-        background: rgba(56, 189, 248, 0.15);
-        transform: scale(0.99);
+        background: rgba(56, 189, 248, 0.2);
+        transform: scale(0.98);
+        border-color: #38bdf8;
     }
 
-    /* 复制按钮居中 */
+    /* 高级按钮，高贵哑光质感 */
     .btn-copy {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 6px;
-        padding: 10px 26px;
-        background: #38bdf8;
-        color: #0b1220;
-        border-radius: 40px;
-        font-weight: bold;
-        font-size: 0.85rem;
+        gap: 10px;
+        padding: 12px 32px;
+        background: linear-gradient(105deg, #2C7BE0, #1E56A0);
+        color: #FFFFFF;
+        border-radius: 60px;
+        font-weight: 600;
+        font-size: 1rem;
         cursor: pointer;
         user-select: none;
-        transition: all 0.2s;
-        border: none;
-        box-shadow: 0 6px 12px rgba(56, 189, 248, 0.2);
-        margin-bottom: 6px;
-        /* 确保居中 */
+        transition: all 0.25s;
+        border: 0.5px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 12px 20px -10px rgba(0, 30, 60, 0.5);
+        margin-bottom: 10px;
         text-align: center;
+        width: auto;
+        min-width: 200px;
+        letter-spacing: 0.3px;
+        backdrop-filter: blur(2px);
     }
 
-    .btn-copy:hover {
-        background: #7ac9ff;
-        transform: translateY(-2px);
+    .btn-copy:active {
+        transform: scale(0.96);
+        background: linear-gradient(105deg, #1E56A0, #15447a);
+        box-shadow: 0 6px 12px -6px rgba(0,0,0,0.4);
     }
 
     .status {
-        margin-top: 8px;
-        display: flex;
+        margin-top: 14px;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        background: rgba(34, 197, 94, 0.08);
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 4px 14px;
+        gap: 10px;
+        background: rgba(46, 204, 113, 0.08);
+        backdrop-filter: blur(8px);
+        padding: 6px 20px;
         border-radius: 60px;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         font-weight: 500;
-        color: #bbf0d1;
+        color: #C0F0D0;
+        border: 0.5px solid rgba(46, 204, 113, 0.25);
+        letter-spacing: 0.2px;
     }
 
     .dot {
         display: inline-block;
-        width: 8px;
-        height: 8px;
-        background: #22c55e;
+        width: 9px;
+        height: 9px;
+        background: #2ecc71;
         border-radius: 50%;
-        box-shadow: 0 0 6px #2ecc71;
+        box-shadow: 0 0 8px #2ecc71;
         animation: pulse 1.2s infinite ease-in-out;
-        vertical-align: middle;
     }
 
     @keyframes pulse {
@@ -177,84 +192,95 @@
         100% { transform: scale(0.95); opacity: 0.7; box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);}
     }
 
-    /* 安全声明卡片 – 置于底部 */
+    /* 安全声明卡片 - 深邃高级 */
     .security-card {
-        background: rgba(0, 20, 50, 0.65);
-        border-radius: 1.3rem;
-        padding: 1rem 1.2rem;
-        margin-top: 20px;
-        margin-bottom: 6px;
+        background: rgba(8, 18, 32, 0.75);
+        backdrop-filter: blur(12px);
+        border-radius: 1.8rem;
+        padding: 1.3rem 1.4rem;
+        margin-top: 28px;
+        margin-bottom: 8px;
         text-align: left;
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        backdrop-filter: blur(4px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.4);
     }
 
     .security-title {
         font-weight: 700;
-        font-size: 0.9rem;
-        color: #7dd3fc;
+        font-size: 1rem;
+        color: #B8E2FF;
         display: flex;
         align-items: center;
-        gap: 8px;
-        margin-bottom: 8px;
+        gap: 10px;
+        margin-bottom: 12px;
         border-left: 3px solid #38bdf8;
-        padding-left: 10px;
+        padding-left: 14px;
+        letter-spacing: -0.2px;
     }
 
     .security-quote {
-        font-size: 0.82rem;
-        line-height: 1.45;
-        color: #eef2ff;
+        font-size: 0.92rem;
+        line-height: 1.55;
+        color: #F0F5FF;
         background: rgba(0, 0, 0, 0.35);
-        padding: 8px 12px;
-        border-radius: 1rem;
-        margin-bottom: 8px;
+        padding: 14px 16px;
+        border-radius: 1.3rem;
+        margin-bottom: 12px;
         font-weight: 500;
+        letter-spacing: 0.2px;
     }
 
     .security-quote strong {
-        color: #facc15;
+        color: #FFE6A3;
         font-weight: 700;
+        background: linear-gradient(135deg, #FFE6A3, #FFD966);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 4px rgba(255,200,100,0.2);
     }
 
     .security-footer-text {
-        font-size: 0.78rem;
-        color: #bbd7fb;
-        margin: 6px 0 0 4px;
+        font-size: 0.85rem;
+        color: #C7DEFF;
+        margin: 8px 0 0 6px;
         font-weight: 500;
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
         flex-wrap: wrap;
     }
 
     .badge-group {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
+        gap: 10px;
+        margin-top: 16px;
     }
 
     .badge {
         background: rgba(56, 189, 248, 0.12);
         border-radius: 60px;
-        padding: 3px 10px;
-        font-size: 0.65rem;
+        padding: 6px 14px;
+        font-size: 0.7rem;
         font-weight: 500;
-        color: #9ac7ff;
-        border: 0.5px solid rgba(56, 189, 248, 0.4);
+        color: #C4E0FF;
+        border: 0.5px solid rgba(56, 189, 248, 0.35);
+        backdrop-filter: blur(4px);
+        letter-spacing: 0.2px;
     }
 
     .tip {
-        margin-top: 8px;
-        font-size: 0.65rem;
-        color: #94a3b8;
+        margin-top: 10px;
+        font-size: 0.7rem;
+        color: #9AB3DA;
         background: rgba(0, 0, 0, 0.3);
         display: inline-block;
-        padding: 3px 12px;
-        border-radius: 30px;
+        padding: 5px 18px;
+        border-radius: 40px;
         text-align: center;
+        backdrop-filter: blur(4px);
+        font-weight: 450;
     }
 
     .toast {
@@ -262,46 +288,83 @@
         bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
-        background: rgba(0, 0, 0, 0.9);
-        backdrop-filter: blur(12px);
-        color: #fff;
-        padding: 8px 18px;
-        border-radius: 40px;
-        font-size: 0.8rem;
+        background: rgba(0, 0, 0, 0.88);
+        backdrop-filter: blur(24px);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 60px;
+        font-size: 0.9rem;
         display: none;
         z-index: 1000;
         white-space: nowrap;
-        border: 1px solid #38bdf8;
+        border: 1px solid rgba(56, 189, 248, 0.6);
         align-items: center;
-        gap: 8px;
+        gap: 10px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
     }
 
     .footer-note {
-        font-size: 0.6rem;
-        color: #6f8fbb;
+        font-size: 0.68rem;
+        color: #8AA3CC;
         text-align: center;
-        margin-top: 10px;
-        padding-top: 6px;
-        border-top: 1px solid rgba(56,189,248,0.15);
+        margin-top: 18px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(56, 189, 248, 0.2);
+        letter-spacing: 0.3px;
+        font-weight: 450;
     }
 
-    @media (max-width: 560px) {
+    /* 手机专属优化：字体更清晰，行高舒适 */
+    @media (max-width: 600px) {
+        body {
+            padding: 12px;
+        }
         .container {
-            padding: 1.2rem 1rem;
+            padding: 1.5rem 1.3rem;
+            border-radius: 1.8rem;
         }
         .title {
-            font-size: 1.45rem;
+            font-size: 1.7rem;
         }
         .site {
-            font-size: 1.1rem;
-            padding: 8px 8px;
-        }
-        .security-quote {
-            font-size: 0.75rem;
+            font-size: 1.2rem;
+            padding: 12px 8px;
         }
         .btn-copy {
-            padding: 8px 22px;
-            font-size: 0.8rem;
+            padding: 11px 24px;
+            font-size: 0.95rem;
+            min-width: 170px;
+        }
+        .security-quote {
+            font-size: 0.86rem;
+            padding: 12px 14px;
+        }
+        .badge {
+            font-size: 0.68rem;
+            padding: 5px 12px;
+        }
+        .tip {
+            font-size: 0.68rem;
+        }
+        .security-title {
+            font-size: 0.95rem;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .container {
+            padding: 1.3rem 1.1rem;
+        }
+        .title {
+            font-size: 1.55rem;
+        }
+        .site {
+            font-size: 1rem;
+        }
+        .btn-copy {
+            padding: 10px 20px;
         }
     }
 </style>
@@ -309,35 +372,39 @@
 <body>
 
 <div class="container">
-    <!-- 顶部标签 -->
-    <div class="tag">⚡ SYSTEM MIGRATION · 安全托管声明</div>
+    <!-- 高贵标识 -->
+    <div class="tag">
+        <span>✦</span>  SYSTEM MIGRATION  <span>✦</span>
+    </div>
 
     <!-- 主标题 -->
     <div class="title">量化交易系统迁移公告</div>
 
-    <!-- 简要描述 -->
+    <!-- 优雅描述 -->
     <div class="desc">
-        系统已完成升级与节点迁移，请复制下方新域名访问。
+        核心引擎已完成升级与节点迁移，请复制下方新域名访问。
     </div>
 
-    <!-- 新域名区域 + 居中复制按钮（域名下面直接是复制按钮，整体居中） -->
+    <!-- 域名区域 + 居中贵族按钮 -->
     <div class="domain-section">
         <div class="site" id="domainText">skjsuw.github.io/2.1</div>
-        <div class="btn-copy" id="copyBtn">📋 一键复制域名</div>
-        <div class="tip">💡 点击上方域名区域 或 按钮均可复制</div>
+        <div class="btn-copy" id="copyBtn">
+            <span>📋</span> 一键复制域名
+        </div>
+        <div class="tip">✦ 轻触上方域名区域 或 按钮均可复制 ✦</div>
     </div>
 
-    <!-- 系统状态指示器 -->
+    <!-- 系统运行状态 -->
     <div class="status">
         <span class="dot"></span>
         系统状态：运行正常 · 已迁移完成
     </div>
 
-    <!-- ★★★★★ 安全声明区块：放置在底部，确保一个屏幕可见全部内容 ★★★★★ -->
+    <!-- ★★★★★ 安全声明：版本四高贵复刻 ★★★★★ -->
     <div class="security-card">
         <div class="security-title">
             🔒 【安全声明】
-            <span style="font-size: 0.6rem; background: #38bdf820; padding: 2px 8px; border-radius: 30px;">公开 · 透明 · 非托管</span>
+            <span style="font-size: 0.6rem; background: #38bdf820; padding: 3px 10px; border-radius: 40px;">公开 · 透明 · 非托管</span>
         </div>
         <div class="security-quote">
             本系统运行于OKX钱包去中心化环境，您的资金始终保留在<strong> 您自己创建的钱包地址</strong>内，系统无权触碰或转移。私钥由您独家掌管，资产安全由区块链底层技术保障。
@@ -352,14 +419,14 @@
         </div>
     </div>
 
-    <!-- 底部极简脚标 -->
+    <!-- 底部脚标高奢简约 -->
     <div class="footer-note">
         ✅ 资金永远在您创建的钱包内运行 · 系统无权触碰
     </div>
 </div>
 
-<!-- 复制提示toast -->
-<div class="toast" id="toast">✅ 复制成功，新域名已保存</div>
+<!-- 复制成功toast -->
+<div class="toast" id="toast">✓ 复制成功 · 新域名已就绪</div>
 
 <script>
     (function() {
@@ -368,36 +435,32 @@
         const copyButton = document.getElementById("copyBtn");
         const toastEl = document.getElementById("toast");
 
-        // 显示toast消息
         function showToastMessage(msg) {
             if (!toastEl) return;
-            toastEl.innerHTML = msg || "✅ 复制成功，新域名已保存";
+            toastEl.innerHTML = msg || "✓ 复制成功，新域名已保存";
             toastEl.style.display = "flex";
             setTimeout(() => {
                 toastEl.style.display = "none";
-                // 恢复默认文案
                 setTimeout(() => {
-                    if (toastEl) toastEl.innerHTML = "✅ 复制成功，新域名已保存";
+                    if (toastEl) toastEl.innerHTML = "✓ 复制成功 · 新域名已就绪";
                 }, 100);
-            }, 1600);
+            }, 1800);
         }
 
-        // 核心复制函数
+        // 复制核心
         function copyDomain() {
-            // 现代 clipboard 优先
             if (navigator.clipboard && window.isSecureContext) {
                 navigator.clipboard.writeText(DOMAIN).then(() => {
                     showToastMessage("📋 复制成功 · " + DOMAIN);
                 }).catch(() => {
-                    fallbackCopyMethod();
+                    fallbackCopy();
                 });
             } else {
-                fallbackCopyMethod();
+                fallbackCopy();
             }
         }
 
-        // 降级方案（兼容微信/旧浏览器）
-        function fallbackCopyMethod() {
+        function fallbackCopy() {
             const textarea = document.createElement("textarea");
             textarea.value = DOMAIN;
             textarea.style.position = "fixed";
@@ -410,17 +473,16 @@
             try {
                 success = document.execCommand("copy");
             } catch (err) {
-                console.warn("execCommand error", err);
+                console.warn(err);
             }
             document.body.removeChild(textarea);
             if (success) {
                 showToastMessage("📋 复制成功 · " + DOMAIN);
             } else {
-                showToastMessage("⚠️ 请手动长按上方域名复制");
+                showToastMessage("⚠️ 请手动长按复制域名");
             }
         }
 
-        // 绑定按钮复制事件
         if (copyButton) {
             copyButton.addEventListener("click", (e) => {
                 e.preventDefault();
@@ -428,14 +490,19 @@
             });
         }
 
-        // 域名区域点击同样支持复制，增强体验
         if (domainElement) {
             domainElement.style.cursor = "pointer";
             domainElement.addEventListener("click", (e) => {
                 e.stopPropagation();
                 copyDomain();
             });
-            // 增加微交互反馈
+            // 增加细腻触感
+            domainElement.addEventListener("touchstart", () => {
+                domainElement.style.transform = "scale(0.98)";
+            });
+            domainElement.addEventListener("touchend", () => {
+                domainElement.style.transform = "";
+            });
             domainElement.addEventListener("mousedown", () => {
                 domainElement.style.transform = "scale(0.98)";
             });
@@ -447,8 +514,7 @@
             });
         }
 
-        // 确保控制台输出辅助信息
-        console.log("[迁移公告] 新域名: " + DOMAIN + " | 安全声明已嵌入: 资金始终在您创建的钱包运行");
+        console.log("[迁移 · 高奢安全声明] 域名: " + DOMAIN + " | 非托管，资金永驻用户钱包");
     })();
 </script>
 </body>
